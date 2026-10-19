@@ -1,0 +1,5 @@
+project_id = "chessdle"
+
+# Minimal remote config: only change the authentication setting rankings need.
+[auth]
+enable_anonymous_sign_ins = true

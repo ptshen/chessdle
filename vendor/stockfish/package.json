@@ -1,0 +1,9 @@
+{
+  "name": "stockfish",
+  "version": "16.0.0-vendored",
+  "license": "GPL-3.0",
+  "type": "commonjs",
+  "main": "src/stockfish-nnue-16-single.js",
+  "description": "Pinned Stockfish 16 single-threaded WASM; classical evaluation, NNUE disabled",
+  "source": "https://github.com/nmrugg/stockfish.js/tree/bb8d0c38ef5512a4825021a50d5951fca22b22b1"
+}

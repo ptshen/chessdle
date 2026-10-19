@@ -1,0 +1,4 @@
+Stockfish.js 16.0.0-vendored — single-threaded build
+License: GNU General Public License version 3 (see COPYING.txt).
+Corresponding source and build instructions: https://github.com/nmrugg/stockfish.js/tree/bb8d0c38ef5512a4825021a50d5951fca22b22b1
+This bundled Stockfish 16 build uses classical evaluation (Use NNUE=false).

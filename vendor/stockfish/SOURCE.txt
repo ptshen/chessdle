@@ -1,0 +1,18 @@
+Stockfish.js 16, single-threaded WebAssembly build.
+License: GNU General Public License version 3. See Copying.txt.
+
+Upstream repository: https://github.com/nmrugg/stockfish.js
+Pinned source commit: bb8d0c38ef5512a4825021a50d5951fca22b22b1
+Source and build instructions:
+https://github.com/nmrugg/stockfish.js/tree/bb8d0c38ef5512a4825021a50d5951fca22b22b1
+
+Unmodified upstream assets and Git blob SHA-1:
+src/stockfish-nnue-16-single.js: a65eee4cc480f3b9306815109a6aac8be298bad6
+src/stockfish-nnue-16-single.wasm: 68a9e278be2b7413584e7c0237833f0faa9cac5e
+
+The application sets Use NNUE=false to use Stockfish 16's built-in classical
+evaluation without downloading an external neural network. cli.cjs is a local
+adapter for Node.js data preparation; the browser loads the upstream JS directly.
+
+These assets are vendored so development and builds need no engine download.
+They were obtained from the official upstream repository, not a third-party mirror.

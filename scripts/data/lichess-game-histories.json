@@ -1,0 +1,402 @@
+[
+  {
+    "rawPuzzleId": "002rd",
+    "moves": "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Nf6 e5 d5 Bb5 Ne4 Nxd4 Bd7 Bxc6 bxc6 O-O Bc5 c3 O-O f3 Ng5 f4 Ne6 Be3 Nxd4 cxd4 Bb6 f5 a5 f6 g6 Qf3 Kh8 Qf4 Qb8 Qh6 Rg8 Rf4 g5 Rf2 Rg6 Qh5 g4 Nc3 Qa7 Rd1 c5 Ne2 Be6 Nf4 Rag8 Nxe6 fxe6 f7 Rf8 Bh6 cxd4 Bxf8 d3 Bg7+"
+  },
+  {
+    "rawPuzzleId": "00K8j",
+    "moves": "d4 d5 c4 e6 Nc3 h6 Bf4 Nf6 e3 c5 cxd5 exd5 dxc5 Bxc5 Qb3 Nc6 Nxd5 Nxd5 O-O-O Be6 Qxb7 Na5 Qb5+ Kf8 Qxc5+ Kg8 Bc7 Qxc7 Rxd5 Qxc5+ Rxc5 Nb7 Rc7 Nd6 Bd3 Bxa2 Nf3 Rc8 Rxc8+ Nxc8 Rd1 f6 Bg6 Kf8 Rd8+ Ke7 Rxh8"
+  },
+  {
+    "rawPuzzleId": "00FHO",
+    "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 c3 Nf6 d4 exd4 cxd4 Bb4+ Nc3 Nxe4 O-O Bxc3 d5 Bf6 Re1 Ne7 Rxe4 d6 Bg5 Bxg5 Nxg5 h6 Nf3 O-O Qe2 Ng6 Re1 Bf5 Rd4 a6 Bd3 Bxd3 Qxd3 Qd7 h4 Rae8 Rxe8 Rxe8 h5 Ne5 Nxe5 Rxe5 g4 Qe7 Kg2 Re1 Qf5 g6 hxg6 fxg6 Qxg6+ Qg7 Qxg7+ Kxg7 Rd2 Kf6 f4 Re4 Kf3 Rc4 b3 Rc5 Ke4 Ra5 a4 Rc5 Rd3 Rc1 Rh3 Kg6 f5+ Kg5 Kf3 Rc3+ Kg2 Rxh3 Kxh3 c6 dxc6 bxc6 Kg3 a5 Kf3 d5 Ke3 c5 Kd3 h5 gxh5 Kxf5 Ke3 Kg5 h6 Kxh6 Kf4 Kg6 Ke5 d4 Ke4 Kf6 b4 cxb4 Kxd4 Ke6 Kc4 Ke5 Kb3 Kd4 Kc2 Kc4 Kb2 Kd3 Kb3 Kd2 Kb2 Kd1 Kb1 Kd2 Kb2 Ke3 Kc2 Ke2 Kb2 Kd2 Kb3 Kc1 Ka2 Kc2 Ka1 Kb3 Kb1 Kxa4 Ka2 Kb5 Kb2 Kc4 Kc2 a4 Kb2 a3+ Ka2 Kc3 Kb1 b3 Kc1 a2 Kd1 a1=Q+ Ke2 Qa2+ Ke3 b2 Ke4 b1=Q+ Ke5 Qd1 Kf5 Qae2 Kf4 Qdf1+ Kg3 Qeg2+ Kh4 Qfh1#"
+  },
+  {
+    "rawPuzzleId": "00H2L",
+    "moves": "c4 e5 Nc3 Bb4 g3 Bxc3 bxc3 h6 d4 Nc6 Bg2 d6 Bxc6+ bxc6 dxe5 dxe5 Qxd8+ Kxd8 Be3 Be6 Rb1 Bxc4 a3 Ne7 Rb7 a6 Nf3 f6 Nd2 Bb5 c4 Kc8 Ra7 Rxa7 Bxa7 Kb7 cxb5 Kxa7 bxc6 Nxc6 e3 Rd8 Ke2 Ne7 Rc1 c6 Nc4 Rd5 e4 Rc5 f3 Nc8 Kd3 Nb6 Rc3 Rxc4 Rxc4 Nxc4 Kxc4 Kb6 a4 h5 h4 a5 f4 g6 f5 gxf5 exf5 e4 Kd4 e3 Ke4 Kc5 Kxe3 Kb4 Kd3 Kxa4 Kc4 c5 g4 hxg4 h5 g3 h6 g2 h7 g1=Q h8=Q Qd4#"
+  },
+  {
+    "rawPuzzleId": "00HEx",
+    "moves": "d4 e6 c4 d5 Nf3 c6 Nc3 a6 e3 Nd7 Be2 Ngf6 O-O dxc4 Bxc4 b5 Bd3 c5 Ne4 Bb7 Nxc5 Bxc5 dxc5 Nxc5 Be2 Qxd1 Rxd1 Rd8 Bd2 O-O Ba5 Rc8 Rac1 h6 Nd4 Na4 b3 Nc5 f3 Ncd7 a4 bxa4 bxa4 Ne5 e4 Ned7 Rb1 Nc5 Rb6 Ba8 Bb4 Nxa4 Rxa6 Nc3 Bxf8 Nxd1 Bxg7 Kxg7 Bxd1 Rc1 Rxa8 Rxd1+ Kf2 Rxd4 g4 Rd2+ Kg3 Nd7 Ra7 Ne5 Kf4 Ng6+ Kg3 Rd3 Ra5 Ne7 h4 Nc6 Rc5 Nd4 Kf2 Rxf3+ Kg2 Re3 g5 hxg5 hxg5 Rxe4 Kg3 Nb3 Rc3 Rb4 Kh3 Nc5 Rg3 Ne4 Rg4 Rb3+ Kh4 Nf2"
+  },
+  {
+    "rawPuzzleId": "00JFF",
+    "moves": "f4 d5 Nf3 Nf6 d4 e6 e3 Bd6 Bd3 O-O O-O c5 c3 Nc6 Ne5 cxd4 exd4 Nd7 Nd2 f6 Nxd7 Bxd7 Nf3 Qc7 Bd2 Rae8 Qe2 e5 fxe5 fxe5 dxe5 Nxe5 Nxe5 Rxf1+ Rxf1 Bxe5 Qh5 g6 Bxg6 hxg6 Qxg6+ Bg7 Qf7+ Kh8 Rf4 Bh6 Rh4"
+  },
+  {
+    "rawPuzzleId": "0068D",
+    "moves": "e4 e5 Nf3 Nf6 Nxe5 Nc6 Nxc6 dxc6 e5 Qe7 d4 Bf5 Qe2 Nd5 c3 O-O-O Nd2 f6 exf6 Qxe2+ Bxe2 Nxf6 O-O Bd6 Nc4 Rde8 Be3 h5 h3 Nd5 Rfe1 Nxe3 Nxe3 Bd7 Bd3 g5 Bg6 Re6 Bf5 Rf6 Bxd7+ Kxd7 Nc4 Rhf8 Re2 g4 hxg4 hxg4 Rae1 Rh8 Nxd6 cxd6 Re7+ Kc8 Re8+ Rxe8 Rxe8+ Kd7 Rh8 g3 f3 Re6 Kf1 a5 Rh7+ Re7 Rxe7+ Kxe7 Ke2 b5 Ke3 Kf6 Kf4 Ke6 Kxg3 c5 dxc5 dxc5 Kf4 Kd5 Ke3 b4 Kd3 bxc3 bxc3 c4+ Ke3 Kc5 a4 Kd5 g4 Ke6 f4 Kf6 Kd4 Kg6 Kxc4 Kf6 Kb5 Ke6 c4 Kd6 Kxa5 Kc6 g5 Kd6 Kb5 Kc7 c5 Kd7 f5 Kc7 a5 Kd7 a6 Kc7 c6 Kb8 Kb6 Ka8 f6 Kb8 f7 Ka8 f8=Q#"
+  },
+  {
+    "rawPuzzleId": "008o6",
+    "moves": "d4 d5 c4 dxc4 Nc3 Nc6 Nf3 Bg4 e3 Nf6 Bxc4 e6 h3 Bh5 g4 Bg6 Bb5 Bb4 Bxc6+ bxc6 Ne5 Bxc3+ bxc3 Qd5 O-O h5 Nxg6 fxg6 g5 Nh7 f4 O-O Qe2 Qb5 c4 Qa6 Bd2 Rab8 Bc3 Rfd8 e4 Nf8 Rac1 Nd7 f5 exf5 exf5 gxf5 Qe6+ Kh8 Qg6 Re8 Qxh5+ Kg8 g6 Nf6 Qxf5 Qxc4 Ba1 Qxa2 Rxc6 Re2 Qf3 Rf8 Rxf6 Rxf6 Qa8+ Rf8 Qxf8#"
+  },
+  {
+    "rawPuzzleId": "00N3B",
+    "moves": "Nf3 c6 d4 d5 c4 Nf6 Nc3 e6 e3 Be7 Bd3 O-O O-O dxc4 Bxc4 b5 Bb3 Bb7 a4 a6 axb5 cxb5 Ne5 b4 Na4 Nc6 Nc4 Nd5 f3 Bd6 e4 Nde7 e5 Bc7 Be3 Nf5 Rc1 Nxe3 Nxe3 Qxd4 Qxd4 Nxd4 Rxc7 Nxb3 Rxb7"
+  },
+  {
+    "rawPuzzleId": "004RF",
+    "moves": "e4 e5 Nf3 Nc6 Bb5 Nd4 Nxd4 exd4 d3 Bc5 c4 c6 Ba4 d6 a3 a6 b4 Ba7 Bf4 Nf6 Nd2 O-O O-O c5 b5 Bd7 Rb1 axb5 cxb5 Be6 Bb3 b6 Nc4 d5 exd5 Nxd5 Bg3 Nc3 Qh5 Nxb1 Rxb1 Bb8 f4 Bxc4 Bxc4 Rxa3 Rf1 Qe7 h4 Qe3+ Kh2 Rxd3 Bxd3 Qxd3 Rf3 Qxb5 f5 Bxg3+ Rxg3 c4 f6 Qxh5 Rxg7+ Kh8 Rg3 Qe5 Kh3 Qxg3+ Kxg3 Rg8+ Kf4 c3"
+  },
+  {
+    "rawPuzzleId": "00KVb",
+    "moves": "b3 e5 Bb2 Nc6 e3 d5 Bb5 Bd6 f4 f6 Qh5+ g6 Qh4 Bd7 Nc3 d4 fxe5 Bxe5 exd4 Nxd4 Bxd7+ Qxd7 O-O-O O-O-O Nf3 Nxf3 gxf3 g5 Qe4 Bf4 Na4 Qd6 Kb1 Ne7 d3 Nc6 Qf5+ Kb8 Qxf6 Rhf8 Qxd6 Rxd6 Ba3 Nd4 Bxd6 cxd6 Nc3 Nxf3 Nd5 Be5 h3 Kc8 Rhf1 Nd2+ Rxd2 Rxf1+"
+  },
+  {
+    "rawPuzzleId": "008LT",
+    "moves": "Nf3 e6 g3 d5 Bg2 Nf6 O-O c5 d3 Nc6 Nbd2 Bd6 Re1 O-O e4 Bb8 Qe2 a5 h4 b5 Nf1 b4 e5 Nd7 Bf4 Ba6 N1h2 Re8 Ng4 f6 exf6 Bxf4 f7+ Kxf7 gxf4 Kg8 Ng5 Nf8 Bh3 Nd4 Qd1 h6 Nf3 Nxf3+ Qxf3 Qxh4 Kg2 Ng6 Rh1 Rf8 Nxh6+ Kh8 Qg3 Nxf4+ Kg1 Qxg3+ fxg3 Ne2+ Kg2 gxh6 Bxe6 Rf6 Bxd5 Raf8 Rae1 Rf2+ Kh3 Bc8+ Kh4 R2f5 Be4 Rg5 Rxe2 Rg4+ Kh5 Rfg8"
+  },
+  {
+    "rawPuzzleId": "00LdT",
+    "moves": "e4 e5 Nf3 Nf6 Nc3 Bc5 Bc4 Nc6 Bb5 O-O Bxc6 bxc6 d4 exd4 Nxd4 Re8 O-O Nxe4 Nxe4 Rxe4 c3 d5 Be3 Bxd4 Bxd4 Qg5 Qf3 Rf4 Qg3 Rg4 Qf3 Qg6 Rfe1 Bb7 g3 Rh4 Re3 c5 Qe2 cxd4 Re8+ Rxe8 Qxe8#"
+  },
+  {
+    "rawPuzzleId": "00AdI",
+    "moves": "Nf3 d5 c4 dxc4 e3 Nf6 Bxc4 a6 d4 b5 Bd3 Bb7 O-O e6 a4 b4 Qe2 c5 b3 Nc6 Bb2 cxd4 Nxd4 Nxd4 Bxd4 Qd5 f3 Bc5 Bc4 Qxd4 exd4 Bxd4+ Kh1 Bxa1 Bb5+ Ke7 Bc4 Rhd8 Nd2 Bc3 Ne4 Nxe4 fxe4 Rd2 Qh5 g6 Qc5+ Ke8 Qc7 Rd7 Qf4 Re7 Rd1 Bc6 h4 Rd7 Rxd7 Bxd7 Qd6 a5 Kh2 Rc8 Bb5 Bxb5 axb5 Rd8 Qc6+ Ke7 b6 Be5+ Kh3 Rd3+ g3 Rxg3+ Kh2 Rc3+ Kg2 Rxc6 b7 Rb6 Kf3 Rxb7 h5 Rd7 hxg6 hxg6 Kg4 Rd4 Kf3 f5 Ke2 Rxe4+ Kd3 Bc3 Kc2 Kd6 Kd3 Kc5 Kc2 a4 Kd3 axb3"
+  },
+  {
+    "rawPuzzleId": "00Ns0",
+    "moves": "e4 e5 Bc4 Nc6 Nc3 Nf6 d3 Be7 f4 O-O fxe5 Nxe5 Nf3 Nxc4 dxc4 Bb4 Bd2 Bxc3 Bxc3 Nxe4 Bd4 Re8 O-O Nd6 Qd3 b6 Ne5 Ba6 b3 c5 Bc3 Nb7 Qg3 f6 Rxf6 Qxf6 Rf1 Qxf1+ Kxf1 Rf8+ Kg1 Rad8 Nc6 g6 Nxd8 Nxd8 Qe5 Ne6 Qh8+ Kf7 Qf6+ Ke8 Qe5 Bb7 Qb8+ Nd8 b4 Bc6 bxc5 bxc5 Qe5+ Ne6 Qb8+ Nd8 Qxa7 Rf4 Qxc5 Ne6 Qe5 Re4 Qh8+ Nf8 Bg7 Re1+ Kf2 Bxg2 Qxf8#"
+  },
+  {
+    "rawPuzzleId": "002O7",
+    "moves": "d4 d5 Bf4 Nc6 e3 Bf5 Nf3 h6 c3 Nf6 Nbd2 e6 Bb5 Bd6 O-O O-O Bg3 a6 Ba4 Qe7 Bxc6 bxc6 Ne5 Qe8 f4 c5 b3 Bg4 Nxg4 Nxg4 Qxg4 cxd4 exd4 f6 Rae1 e5 fxe5 fxe5 Rxf8+ Qxf8 Bxe5 Bxe5 Rxe5 Qa3 Nf1 Qxa2 Re7 g5 Qe6+ Kh8 Qxh6+ Kg8 Qg7#"
+  },
+  {
+    "rawPuzzleId": "00HHN",
+    "moves": "b3 e5 Bb2 Qf6 f4 d6 fxe5 dxe5 Nf3 Nc6 Nc3 Bd6 Ne4 Qe7 c4 b6 d4 exd4 Nxd6+ Qxd6 Nxd4 Nxd4 Bxd4 f6 e3 Bb7 Qg4 Qe7 O-O-O Nh6 Qh5+ Qf7 Qe2 O-O Rg1 Rfe8 Qb2 c5 Bc3 Rxe3 Bd2 Re5 Bxh6 gxh6 Qd2 Re7 Qxh6 Be4 Bd3 Rae8 Bxe4 Rxe4 Rd3 Re2 Rg3+ Kh8 Rf1 Qe7 Qxf6+ Qxf6 Rxf6 Rxa2 Rf7 Re1#"
+  },
+  {
+    "rawPuzzleId": "00C3O",
+    "moves": "e4 e5 f4 d6 Nf3 f6 Bc4 Bg4 O-O Bh5 d4 Nd7 Nc3 c6 fxe5 dxe5 dxe5 Nxe5 Qe2 Bxf3 Rxf3 Nxf3+ Qxf3 Qd4+ Kh1 Qxc4 Bf4 Qf7 Rd1 Rd8 Rf1 Bd6 Bxd6 Rxd6 e5 Re6 Ne4 Rxe5 Nd6+ Kf8 Nxf7 Kxf7 Rd1 Nh6 Rd7+ Ke6 Qh3+ Nf5 Rd1 Rd8 Qb3+ Ke7 Qb4+ Ke8 Rxd8+ Kxd8 g3 b6 Qg4 c5 Qd1+ Kc7 Qf3 Nd4 Qd3 h6 Kg1 b5 Qg6 Ne6 Qf7+ Kb6 Qe7 a6 Qd6+ Kb7 Qd7+ Kb6 a4 b4 Qc8 Nc7 a5+ Kc6 b3 h5 Qf8 Ne6 Qe8+ Kb7 Qd7+ Ka8 Qc6+ Ka7 Qb6+ Ka8 Qxa6+ Kb8 Qb6+ Kc8 a6 Nc7 Qb7+ Kd7 a7 Re8 Kg2 g5 h4 g4 Kf2 Kd6 Qb8 Kd7 Qb6 Re6 a8=Q Nxa8 Qxc5 Nc7 Qxh5 Nd5 Qf7+ Kd6 Qf8+ Ke5 Qb8+ Kd4 h5 Re5 h6 f5 Qa7+ Kc3 h7 Re8 Qc5+ Kb2 Qxd5 Rh8 Qd4+ Kxc2 Qxh8 Kxb3 Qd4 Ka3 h8=Q b3 Qc3 Ka2 Qb2#"
+  },
+  {
+    "rawPuzzleId": "000Zo",
+    "moves": "d4 d5 c4 e6 Nc3 c5 cxd5 exd5 e3 Nc6 dxc5 Bxc5 Qxd5 Qe7 Bb5 Bd7 Nf3 O-O-O O-O Nf6 Qc4 a6 Bxc6 Bxc6 Nd2 h5 Nb3 Bb4 Bd2 Kb8 a3 Bxc3 Bxc3 Bb5 Qf4+ Ka8 Rfd1 Nd5 Qe5 Qxe5 Bxe5 f6 Bd4 Ba4 Rd3 Rc8 Nc5 Bb5 Rd2 b6 Ne6 g5 e4 Nf4 Nxf4 gxf4 Bxf6 Rhg8 f3 Rg6 e5 Rcg8 Rc1 Kb7 Rc3 Re8 Rd4 Rxf6 exf6 Re1+ Kf2 Rf1#"
+  },
+  {
+    "rawPuzzleId": "004X6",
+    "moves": "e4 e5 Nf3 Nc6 Nc3 Nf6 d4 exd4 Nxd4 Bc5 Nxc6 bxc6 Bd3 d6 O-O Bg4 Be2 Qd7 Bxg4 Nxg4 Bd2 Rb8 h3 Ne5 Bf4 Ng6 Bh2 O-O e5 d5 Na4 Be7 Qd4 c5 Nxc5 Bxc5 Qxc5 Rxb2 Rfd1 c6 Rd2 Rfb8 Bg3 Qe6 a3 Nxe5 Bxe5 Qxe5 Qxc6 Rb1+ Rxb1 Rxb1+ Rd1 Rxd1#"
+  },
+  {
+    "rawPuzzleId": "00HPz",
+    "moves": "Nf3 Nf6 b3 e6 c4 d5 e3 c5 Bb2 Nc6 cxd5 exd5 Bb5 Bd6 d4 Qa5+ Nc3 Ne4 Bxc6+ bxc6 Qc2 Ba6 O-O-O Nxc3 Bxc3 Qb6 dxc5 Qxc5 Bxg7 Qxc2+ Kxc2 Rg8 Be5 Bxe5 Nxe5 Rxg2 Rd2 f6 Nf3 Ke7 Nh4 Rg5 f4 Rh5 Nf3 Rg8 Rg1 Rxg1 Nxg1 Bc8 Rg2 Kf7 b4 Bf5+ Kc3 Be4 Rb2 Rh6 a4 Ke6 Kd4 Kd6 Rf2 Rg6 Ne2 a5 bxa5 Rg8 Nc3 c5#"
+  },
+  {
+    "rawPuzzleId": "005xu",
+    "moves": "d4 d5 Nc3 Nf6 Bf4 a6 e3 e6 Nf3 c5 Qd2 Nc6 O-O-O cxd4 exd4 Bb4 Bd3 Qa5 Ne5 Bxc3 Qxc3 Qxc3 bxc3 Nxe5 Bxe5 Ng4 Bg3 O-O h3 Nf6 f3 Bd7 Kd2 Rfc8 Rb1 b5 Rb3 h5 Be5 Ne8 g4 h4 Rhb1 f6 Bf4 g5 Be3 Nd6 f4 Nc4+ Bxc4 dxc4 Rb4 gxf4 Bxf4 Kg7 a4 Kg6 axb5 axb5 Re1 Kf7 Be3 Ra2 Bf2 Rh8 Rbb1 Bc6 Ra1 Rxa1 Rxa1 Bd7 Ra7 Ke7 Ke3 f5 gxf5 exf5 Kf4 Rh5 Rb7 Ke8 Ra7 Ke7 Ke5 Rh6 Be3 Re6+ Kf4 Re4+ Kf3 Re6 d5 Rg6 Bc5+ Kd8 Bf2 f4 Kxf4 Bxh3 Bxh4+ Kc8 Ra5 Rg4+ Ke5 Rxh4 Rxb5 Rh5+ Kd6 Bf5 Rc5+ Kb7 Rxc4 Bxc2 Rb4+ Kc8 c4 Rh6+ Kc5 Rh5 Rb6 Bd3 Rb4 Rg5 Ra4 Be2 Kc6 Rg6+ d6 Bf3+ Kc5 Rg5+ Kb6 Kd7 c5 Rg8 Ra7+ Ke6 Re7+ Kd5 d7 Rd8 Kc7 Rxd7+ Kxd7 Kxc5 Rf7 Bc6+ Kc7 Bd5 Rf1 Kd4 Rc1 Ke5 Kd7 Be6+ Ke7 Bd5 Rc5 Kd4 Kd6 Be4 Ra5 Bf3 Ra4+ Kc3 Kc5 Be2 Ra3+ Kb2 Rg3 Bd1 Kb4 Bh5 Rg2+ Kc1 Kc3 Kd1 Rh2 Bg6 Rg2 Ke1 Rxg6"
+  },
+  {
+    "rawPuzzleId": "00HzH",
+    "moves": "d4 d5 Bf4 e6 e3 Nf6 Nf3 Bd6 Ne5 O-O Nd2 Nbd7 Ndf3 Ne4 Bd3 f6 Nxd7 Qxd7 Bxd6 Qxd6 O-O f5 Ne5 c5 Bxe4 fxe4 c3 b6 Qg4 Rf6 f3 exf3 Rxf3 Rxf3 Qxf3 Qe7 Rf1 Ba6 Nc6 Qe8 Rf2 Bd3 Ne5 Bf5 g4 Be4 Qf4 h6 h4 Qe7 h5 Qh4 Qh2 Qg5 Qf4 Qh4 Nf3 Qe7 Ne5 cxd4 exd4 Rc8 Ng6 Qd7 Qf8+ Rxf8 Rxf8+"
+  },
+  {
+    "rawPuzzleId": "001wb",
+    "moves": "e4 e5 Nf3 Nc6 Bb5 Nd4 Nxd4 exd4 Qf3 c6 Bc4 Qf6 Qb3 Bc5 d3 Ne7 e5 Qg6 c3 b5 Bxb5 cxb5 Qxb5 Bb6 O-O Bb7 f3 dxc3+ Kh1 Nf5 Nxc3 Ng3+ hxg3 Qh5#"
+  },
+  {
+    "rawPuzzleId": "00NGM",
+    "moves": "d4 d6 e4 e6 c4 c6 Nf3 h6 h4 Be7 g3 Qb6 Nc3 Nf6 Bh3 Na6 a3 Bd7 b4 Nxb4 axb4 Qxb4 Qd3 Nxe4 Bd2 Qb2 O-O Nxd2 Nxd2 Qb6 Rfb1 Qc7 Nf3 f5 Na4 O-O c5 g5 hxg5 hxg5 g4 Kg7 cxd6 Bxd6 Nxg5 Bf4 Nf3 Rh8 Bg2 fxg4 Nd2 Bxd2 Qxd2 Qh2+ Kf1 Raf8 Qg5+ Kf7 Rxb7 Qd6 Qxg4 Rhg8 Qh5+ Ke7 Qh7+ Kd8 Rxa7 Qf4 Qxd7#"
+  },
+  {
+    "rawPuzzleId": "00HzX",
+    "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 Nc3 Bc5 O-O O-O d3 h6 h3 d6 Re1 Na5 Bb3 Nxb3 axb3 a6 d4 exd4 Nxd4 Re8 Bf4 Ba7 Nf5 Bxf5 exf5 Qd7 Qd3 c6 Qxd6 Qxf5 Qd2 Rad8 Rxe8+ Rxe8 Bg3 Nh5 Bh2 Nf6 Ra4 b5 Rxa6 Bc5 Rxc6 Bb4 Bg3 Bxc3 bxc3 Ne4 Qd3 Nxg3 Qxg3 Qxc2 Rxh6 Qxb3 Rh5 Qd1+ Kh2 Qxh5 f4 Qe2 Qg5 Qd2 Qg4 Qxc3 f5 b4 Qd1 b3 Qd7 Qe5+ Kg1 b2 Qb7 Qe1+ Kh2 b1=Q Qxb1 Qxb1 Kg3 Qxf5 Kh4 g5+ Kh5 Kg7 h4 Rh8#"
+  },
+  {
+    "rawPuzzleId": "00Mei",
+    "moves": "e4 e6 d4 d5 Nd2 Nf6 e5 Nfd7 c3 c5 Bd3 Nc6 Ne2 Qb6 Nf3 f6 exf6 Nxf6 O-O Bd6 Re1 O-O Rb1 e5 dxe5 Nxe5 Nxe5 Bxe5 Ng3 Qd6 Qc2 Bd7 Bg5 h6 Bxf6 Rxf6 Re2 c4 Bh7+ Kh8 Rbe1 Bxg3 hxg3 Raf8 f4 g6 Re7 Bf5 Qf2 R8f7 Rxf7 Rxf7 Qxa7 Kxh7 Qd4 b5 Re5 Rd7 Kh2 h5 Re8 Rg7 Re5 Rd7 Re8 Rg7 Re5 Qa6 Rxd5 Qxa2 Rxb5 Bd3 Rb8 Qa7 Qd8 Qxb8 Qxb8 Re7 Qd6 Re2 b4 Be4 Qc7+ Kh6 Qxc4 Rxg2+ Kh3 Bf3 Qd3 Bb7 Qd6 Rc2 Qf8+ Kh7"
+  },
+  {
+    "rawPuzzleId": "000mr",
+    "moves": "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Qf6 Be3 Bc5 c3 Nge7 Bc4 O-O O-O Ne5 Be2 N7g6 Nd2 a6 N2f3 Ng4 Bg5 Qb6 h3 N4e5 Rb1 f6 Be3 Kh8 b4 Be7 Nxe5 Nxe5 Nf5 Qe6 f4 Ng6 Nxe7 Nxe7 Qc2 f5 Rbe1 fxe4 Bd4 Nf5 Bg4 d5 Be5 Qg6 Bxf5 Bxf5 Re3 b6 Bxc7 d4 cxd4 Rac8 Rc3 e3 Qc1 Bxh3 Qc2 Bf5 Qc1 Be4 Qb2 Rf7 Rfc1 Bd3 Bxb6 Rcf8 Bc7 e2 Qd2 Bb5 Be5 Qg4 Qe3 h5 Qg3 Qxg3 Rxg3 Kh7 Kf2 g6 Ke1 Rf5 Rc7+ R5f7 Rxf7+ Rxf7 Rc3 g5 Rc7 Rxc7 Bxc7 g4 Be5 Kg6 Kf2 Kf5 d5 h4 d6 Ke6 a3 h3 gxh3 gxh3 Bc3 Kxd6 Kg3 Kd5 Kxh3 Ke4 Kg4 Kd3 Be1 Kc2 f5 Kd1 Bh4 e1=Q Bxe1 Kxe1 f6 Bc4 Kg5 Kd2 a4 Kc3 b5 axb5 axb5 Bxb5 f7 Bc4 f8=Q Kb3 Qb8+ Kc3 Qh8+ Kd3 Kg4 Kc2 Kg3 Kb3 Qh2 Ka4 Qf2 Bb3 Kf4"
+  },
+  {
+    "rawPuzzleId": "0039T",
+    "moves": "d4 e6 e4 d5 Nc3 Nf6 e5 Nfd7 f4 c5 Nf3 Nc6 Be3 h6 Qd2 g5 g3 g4 Ng1 cxd4 Bxd4 Nxd4 Qxd4 Bc5 Qd2 b5 Bxb5 Qb6 Nge2 Be3 Qd3 d4 Ne4 Rb8 Bxd7+ Bxd7 Nf6+ Ke7 Nxd7 Kxd7 Nxd4 Bxd4 Rd1 Qxb2 Qxd4+ Qxd4 Rxd4+ Ke7 Ra4 Rb1+ Ke2 Rxh1 Rxa7+ Kf8 a4 Kg7 f5 Rxh2+ Ke3 Re8 f6+ Kg6"
+  },
+  {
+    "rawPuzzleId": "004d8",
+    "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 b5 f3 g6 Qd2 Bg7 g4 O-O h4 h5 gxh5 Nxh5 Rg1 Bxd4 Bxd4 e5 Be3 Qxh4+ Bf2 Qh2 O-O-O Nf4 Nd5 Nxd5 exd5 Qf4 Qxf4 exf4 Bd4 Bf5 Rh1 f6 Bh3 Bxh3 Rxh3 Nd7 Rdh1 Kf7 Rh7+ Ke8 Rh8 Rb8 Rxf8+ Kxf8 Rh8+ Ke7 Rh7+ Kd8 Rh8+ Kc7 Rh7 Rf8 Rh6 g5 Rh7 Kd8 Kd2 Ke8 Kd3 Rf7 Rh8+ Ke7 Ra8 Ne5+ Bxe5 fxe5 Rxa6 g4 Ra7+ Kf6 Rxf7+ Kxf7 fxg4 Kg6 Ke4 Kg5 Kf3 e4+ Kxe4 Kxg4 Kd3 Kg3 b3 f3 a4 bxa4 bxa4 f2 a5 f1=Q+ Kc3 Qb5"
+  },
+  {
+    "rawPuzzleId": "00LI0",
+    "moves": "e4 c6 d4 d5 exd5 cxd5 Nc3 Nf6 Nf3 Bg4 h3 Bh5 Bg5 e6 Qd3 Nbd7 Be2 Bg6 Qe3 Bb4 O-O Bxc2 Nxd5 Nxd5 Bxd8 Nxe3 fxe3 Rxd8 Rac1 Be4 Ng5 Bg6 Rc4 Bd2 e4"
+  },
+  {
+    "rawPuzzleId": "00Lyc",
+    "moves": "d4 Nf6 c4 g6 f3 d5 cxd5 Nxd5 e4 Nb6 Nc3 Bg7 Be3 O-O Qd2 e5 d5 c6 O-O-O cxd5 exd5 N8d7 h4 Nf6 Nh3 Bd7 Ng5 Rc8 Kb1 Rxc3 Qxc3 Nfxd5 Qd2 h6 Ne4 Nxe3 Qxe3 f5 Nc3 f4 Qd2 e4 Nxe4 Rf5 Bc4+ Kh7 Be6 Rb5 b3 Qc7 Bxd7 Rd5 Qxd5 Nxd5 Rxd5 Qb6 Rhd1 Qb4 Be6 a5 Rd8 a4 Bg8+ Kh8 Nd6 Bf6 Re8 Qc3 Bd5+ Kg7 Nc4 Qa1+ Kc2 Qxa2+ Kd3 Qxb3+ Ke2 a3 Nd6 Qb2+ Rd2 Qb6 Ne4 Qe3+ Kd1 Bb2 Re7+ Kf8 Rf7+ Ke8 Nd6+ Kd8 Nxb7+ Kc8 Nd6+ Kb8 Rb7+ Ka8 Rb3+ Ka7 Rxe3 fxe3 Re2 a2 Bxa2"
+  },
+  {
+    "rawPuzzleId": "00HEh",
+    "moves": "e4 e5 Nf3 Nf6 Nxe5 d6 Nf3 Nxe4 Nc3 Nxc3 dxc3 Be7 Bc4 c6 O-O d5 Bb3 O-O c4 dxc4 Bxc4 Qc7 Bg5 Bd6 Qe2 Bg4 h3 Bh5 Rad1 Nd7 g4 Bg6 Be7 Bxe7 Qxe7 Rad8 Rfe1 Qf4 Qe2 Nf6 g5 Ne4 h4 Nc5 Rxd8 Rxd8 Qe8+"
+  },
+  {
+    "rawPuzzleId": "008D5",
+    "moves": "e4 e6 f4 d5 e5 c5 Nf3 Nh6 d4 Nc6 c3 cxd4 Nxd4 Nxd4 cxd4 Bb4+ Nc3 Nf5 Qa4+"
+  },
+  {
+    "rawPuzzleId": "005wy",
+    "moves": "d4 d5 Bf4 Nc6 Nf3 Bg4 c3 e6 Nbd2 Bd6 Bg3 Bh5 e3 Nge7 Qb3 Qc8 Bb5 Rb8 Ne5 O-O Qc2 Bxe5 dxe5 Bg6 Bd3 Bxd3 Qxd3 Ng6 h4 Ngxe5 Qe2 h6 Bh2 Qd8 g4 Qf6 Bf4 Ng6 g5 hxg5 hxg5 Qf5 Qh5 Rfd8 Bxc7 Kf8 Bxb8 Rxb8 f4 Ke7 O-O-O Qd3 Qh7 Qxe3 Qxg7 Qxf4 Rh7 Rf8 Qxg6 Qf5 Qxf5 exf5 g6 Rg8 Rg1 Kf6 gxf7 Rf8 Rg8 Rxf7 Rxf7+ Kxf7 Ra8 a6 Rh8 Kg7 Rh5 Kf6 Nf1 Ke5 Ne3 Ke4 Nxf5 d4 Nxd4 Nxd4 cxd4 Kxd4 Rh4+ Kc5 Rh5+ Kc6 Rh6+ Kc7 Rh7+ Kb6 Kc2 Ka7 Kc3 Kb6 Kc4 Kc6 b4 b6 a4 Kd6 b5 axb5+ axb5 Ke6 Rh6+ Kd7 Rxb6 Kc7 Rc6+ Kb7 Kc5 Kb8 Rh6 Kb7 b6 Kb8 Rh7 Kc8 Kc6 Kb8 Rh8#"
+  },
+  {
+    "rawPuzzleId": "00Evs",
+    "moves": "b4 Nf6 b5 e6 c4 Bc5 e3 O-O a4 h6 Ba3 Bb6 Bb4 c5 bxc6 Nxc6 Bxf8 Qxf8 Qb3 d5 cxd5 exd5 d4 Ne4 Nf3 Ba5+ Kd1 Nxf2+ Ke2 Nxh1 Nc3 Bg4 Nxd5 Re8 Qxb7 Nxd4+ Kd3 Nxf3 gxf3 Bf5+ e4 Nf2+ Ke2 Nxe4 fxe4 Rxe4+ Kf3 g5 Nf6+ Kg7 Nxe4 Bxe4+ Qxe4 Qd6 Kg2 Qd2+ Qe2 Qd5+ Qf3 Qd2+ Be2 Qd4 Rd1 Qe5 Bc4 Qb2+ Qe2 Qf6 Rf1 Qc6+ Rf3 Bb6 Qb2+ f6 Bb5 Qd5 Qe2 Bc5 Bc4 Qd4 Rd3 Qg1+ Kf3 g4+ Ke4 Qh1+ Kf5 Qc6 Qxg4+ Kf8 Rd8+ Ke7 Rg8 Qd7+ Ke4 Qd4+ Kf5 Qe5+ Kg6"
+  },
+  {
+    "rawPuzzleId": "00Nf5",
+    "moves": "b4 e5 Bb2 Nc6 b5 Nd4 e3 Nxb5 Bxb5 c6 Be2 d6 f4 exf4 exf4 Nf6 Nf3 Be7 O-O O-O Nc3 d5 d4 b5 Rb1 Bb7 Kh1 a6 Ne5 c5 Ng4 cxd4 Nxb5 axb5 Nxf6+ Bxf6 Bxd4 Bxd4 Qxd4 Bc6 Qb2 Re8 Bxb5 Bxb5 Qxb5 Rb8 Qd3 Rb2 Rxb2"
+  },
+  {
+    "rawPuzzleId": "0055Y",
+    "moves": "d4 Nf6 Bf4 c5 e3 Qb6 Na3 Qxb2 Nb5 Na6 Rb1 Qxa2 Qc1 Qe6 Nf3 h6 Bd3 g5 Bg3 g4 Ne5 d6 Bc4 d5 Be2 h5 dxc5 Nd7 Nd4 Qf6 Bb5 Bh6 c6 bxc6 Nexc6 O-O Qa3 Nac5 Ne5 Nxe5 Qxc5 h4 Bxe5 Qxe5 Bc6 Bxe3 O-O Bxd4 Qxd5 Qxd5 Bxd5 Ba6 Rfd1 Bb6 Bxa8 Rxa8 Rd5 f6 Rb4 g3 Rg4+ Kf7 hxg3 hxg3 Rxg3 Rc8 c3 Bb7 Rh5 Be4 Rh4 Bf5 Rf3 e6 c4 Bc5 g4 Bg6 g5 f5 Kg2 e5 Rb3 Rc7 Rh1 f4 Ra1 e4 Ra6 Bb6 Ra4 f3+ Kg3 Rc5 Kg4"
+  },
+  {
+    "rawPuzzleId": "00F2o",
+    "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 b5 Bb3 Nf6 O-O h6 Re1 Bc5 c3 O-O d4 exd4 cxd4 Bb4 Nc3 Re8 e5 Nh7 a4 Ba5 axb5 axb5 Nxb5 Bb7 Bd2 Bxd2 Qxd2 Rxa1 Rxa1 d6 exd6 cxd6 Bc4 Nf6 Nc3 Nb4 Ra7 Bd5 Nxd5 Nbxd5 b3 Ne4 Qd1 Ndc3 Qc2 Re7 Rxe7 Qxe7 Nd2 Nxd2 Qxc3 Ne4 Qe3 Kh8 f3 d5 Bxd5"
+  },
+  {
+    "rawPuzzleId": "00DkJ",
+    "moves": "e4 e5 d4 exd4 c3 dxc3 Bc4 cxb2 Bxb2 Nf6 e5 Qe7 Ne2 Ng8 O-O d6 f4 dxe5 Bxe5 Qc5+ Qd4 Qxd4+ Bxd4 Nc6 Bb5 Bd7 Bxc6 Bxc6 Nbc3 O-O-O Bxa7 b6 a4 Kb7 a5 Kxa7 axb6+ Kxb6 Rfb1+ Kc5 Ra5+ Kd6 Rd1+ Ke7 Re5+ Kf6 Rxd8 Be7 Rd1 Bd6 Ra5 Ne7 Nd4 Bd7 g4 Bxg4 Rf1 g6 f5 Nxf5 Ne4+ Kg7 Nxf5+ Bxf5 Nxd6 cxd6 Kf2 Rd8 Rg1 d5 Ke3 Be6 Kd4 h6 h4 Kh7 Ra7 Kg7 Re1 h5 Rxe6 Kg8 Ree7 Rf8 Kxd5 f5 Rg7+ Kh8 Rh7+ Kg8 Rag7#"
+  },
+  {
+    "rawPuzzleId": "00IFk",
+    "moves": "e4 d6 d4 Nf6 Nc3 Nbd7 Nf3 e5 dxe5 dxe5 Nxe5 Nxe5 Qxd8+ Kxd8 Bg5 Bd6 Be2 c6 O-O-O Kc7 f4 Ned7 e5 Nxe5 fxe5 Bxe5 g3 Bxc3 bxc3 Nd5 c4 Nc3 Rde1 Nxe2+ Rxe2 Be6 Rhe1 Bxc4 Re7+ Kb6 Kb2 Be6 Be3+ Ka6 a4 Rad8 Kc3 Rd5 Rb1 b6 Rc7 Rc8 Re7 Ra5 Rb4 Rd8 Kb2 Re5 Bf4 Re2 h4 Rd7 Rxd7 Bxd7 Kb3 c5"
+  },
+  {
+    "rawPuzzleId": "00NUc",
+    "moves": "e4 e5 f4 d5 Nf3 dxe4 Nxe5 Nf6 Bc4 Be6 Bxe6 fxe6 O-O Nc6 Nxc6 bxc6 Nc3 Bc5+ Kh1 O-O h3 e5 fxe5 Nd5 Nxd5 cxd5 d3 e3 Re1 d4 c3 Qd5 b4 Rf2 Qb3 Qxb3 axb3 Bb6 c4 c5 b5 Raf8 Ba3 Rd2 b4 Rff2 bxc5 Bc7 Rg1 Bxe5 b6 axb6 cxb6 e2 c5 Rxd3 c6 Rb3 c7 Bxc7 bxc7 Rc3 Rac1 Rxc7 Rxc7 d3 Bb4 Rf1 Rc1 Rf4 Bd2 Re4 Rge1 h6 Kg1 Kh7 Rc3 Rd4 Kf2 Rd6 Ke3 Rg6 Rxd3 Rxg2 Rxe2 Rg3+ Kd4 Rg6 Re4 Rd6+ Ke3 Rg6 Bc3 Rg3+ Kd2 Rg2+ Re2 Rg6 Rd6 Rxd6+ Kc2 Rc6 Re3 Rc4 Kd3 Rc6 Rg3 Rd6+ Ke3 Rd7 Rxg7+ Rxg7 Bxg7 Kxg7 Kf4 Kg6 Kg4 Kh7 h4 Kg7 h5 Kh7 Kf5 Kg7 Ke6 Kh7 Kf6 Kh8 Kf7 Kh7 Kf6 Kh8"
+  },
+  {
+    "rawPuzzleId": "001w5",
+    "moves": "d4 e6 Bg5 Be7 Bxe7 Nxe7 e3 d5 Bd3 c6 c3 Nd7 Nd2 Nf6 Qc2 O-O O-O-O Qc7 Ngf3 b5 Ne5 a6 g4 Ng6 Nxg6 fxg6 g5 Nh5 f4 Rb8 a3 a5 Be2 b4 axb4 axb4 Bxh5 gxh5 g6 h6 Nf3 bxc3 bxc3 Qa5 Ne5 Qa1+ Kd2 Qa6 Rhg1 c5 Nf7 cxd4 exd4 Qa7 Nxh6+ gxh6 g7 Rf7 Qc1 Ba6 Ke3 Qe7 Rg6 Rxg7 Rdg1 Rxg6 Rxg6+ Kf8 Qg1 Qf7 Rxh6 Ke7 Qg5+ Kd7 Qe5 Rg8 Rxe6 Qxe6 Qxe6+ Kxe6"
+  },
+  {
+    "rawPuzzleId": "00IpT",
+    "moves": "e4 e5 Bc4 Bc5 Ne2 Nf6 d3 Ng4 O-O Nxf2 Rxf2 Bxf2+ Kxf2 d6 Ng3 Nc6 Bg5 f6 Bh4 g5 Qh5+ Kd7 Qf7+ Qe7 Qd5 gxh4 Nf5 Qe8 d4 exd4 Ng7 Qe5 Qf7+ Kd8 Nd2 Qf4+ Kg1 Qxd2 Qxf6+ Ne7 Ne6+ Kd7 Qxh8 Qe3+ Kh1 c6 Qd8#"
+  },
+  {
+    "rawPuzzleId": "00Ea3",
+    "moves": "e4 c6 Nf3 d5 exd5 cxd5 d4 Bf5 Bd3 Bxd3 Qxd3 Nc6 c3 e6 O-O Bd6 Bg5 Nf6 Re1 h6 Bh4 g5 Bg3 Bxg3 fxg3 Qb6 b3 O-O Nbd2 Ne7 Ne5 Rad8 Rf1 Kg7 Qf3 Neg8 Ng4 Nxg4 Qxg4 f5 Qe2 Rf6 Qe5 Kg6 g4 f4 Nf3 Qd6 Qe2 Kg7 Ne5 Ne7 Qb5 b6 Rad1 Ng6 Rde1 Nxe5 Rxe5 Rdf8 Qa6 Qd7 Qd3 a5 Rfe1 Qd6 c4 dxc4 Qxc4 f3 gxf3 Rxf3 Rxe6 Qf4 Re7+ Kg6 Qd5 Rf1+ Kg2 Qxg4#"
+  },
+  {
+    "rawPuzzleId": "00LRq",
+    "moves": "e4 c5 d3 d6 Be2 Nc6 Nf3 e5 c3 Nf6 O-O Bg4 a4 Be7 Na3 Qd7 Bg5 h6 Bh4 g5 Bg3 Nh5 h4 O-O-O d4 Nxg3 fxg3 Rhg8 hxg5 Bxf3 Rxf3 Bxg5 Nb5 f6 d5 Ne7 Nxa7+ Kb8 Nb5 f5 Qc2 Rdf8 a5 fxe4 Qxe4 Rxf3 Qxf3 Nf5 a6 Be3+ Kh2 Rxg3 Qh5 Bf4 Kh1 Rg7 axb7 Ng3+ Kg1 Nxh5 Bxh5 Qxb7 Nxd6 Qxb2"
+  },
+  {
+    "rawPuzzleId": "002VP",
+    "moves": "d4 d5 c4 e5 dxe5 d4 Nf3 Nc6 Nbd2 Bg4 a3 Qd7 h3 Bh5 b4 f6 exf6 Nxf6 g3 Bd6 Bg2 O-O O-O Rad8 Bb2 Be7 b5 Na5 Nxd4 Bc5 N2f3 Nxc4 Qb3 Bf7 Ne5 Nxe5 Qc2 Bxd4 Rad1 Bxf2+ Kxf2 Qxb5 Rxd8 Rxd8 Qxc7 Re8 Ba1 Qb6+ Qxb6 axb6 Rb1 Nc4 Bxb7 Nxa3 Rxb6 Rb8 Be5 Nc4 Bxb8 Nxb6 Bf3 Nbd7 Bd6 h6 g4 Kh7 h4 Be6 g5 hxg5 hxg5 Ne8 Ba3 Kg6 Be7 Ne5 Be4+ Kh5 Kg3 Nc7 Bd6 Kxg5 Bxe5 Ne8 Bc6 Nf6 Bd4 Bd5 Bxf6+ gxf6 Bxd5 Kf5 e4+ Ke5 Kg4 f5+ exf5 Kxd5 Kg5 Kd6 Kf6 Kd7 Kg7 Ke8 f6"
+  },
+  {
+    "rawPuzzleId": "0092V",
+    "moves": "e4 e5 Nf3 Nc6 c3 d6 d4 exd4 cxd4 d5 e5 Bg4 Be3 f6 h3 Bxf3 Qxf3 fxe5 Bb5 Bb4+ Bd2 e4 Qh5+ g6 Qe5+ Qe7 Qxh8 Bxd2+ Nxd2 O-O-O Bxc6 Nf6 Qxd8+ Qxd8 Ba4 Qd6 O-O h5 Rac1 a6 Rc3 b5 Bb3 Qf4 Nb1 g5 Rc6 g4 g3 Qf3 h4 Kd7 Rxa6 Qd3 Rxf6 Qxd4 Rf7+ Ke6 Rh7 e3 Rxh5 exf2+ Rxf2 Qe3 Rh8 Qe1+ Rf1 Qe3+ Kg2 Qe2+ Rf2 Qe4+ Kg1 Qe1+ Kg2 Qe4+ Kg1 Qe1+"
+  },
+  {
+    "rawPuzzleId": "001XA",
+    "moves": "Nf3 d5 c4 c6 d4 Nf6 Nbd2 e6 a3 Be7 g3 O-O Bg2 Nbd7 O-O b6 Qc2 Bb7 b4 c5 bxc5 bxc5 Rb1 Qc7 cxd5 Bxd5 e4 Bb7 Bb2 Rac8 Rbc1 Qb8 d5 exd5 e5 Ne4 Nxe4 dxe4 Nd2 Nxe5 Nxe4 c4 Bc3 Nd3 Rb1 Qc7 Rxb7 Qd8 Qe2 Bxa3 Qg4 g6 Nf6+ Kg7 Nd7+ Kg8 Qd4 f6 Bd5+ Kh8 Nxf6"
+  },
+  {
+    "rawPuzzleId": "00Dt6",
+    "moves": "e4 d5 exd5 Qxd5 Nc3 Qd8 Nf3 Nf6 h3 e6 d4 Be7 Bd3 O-O Ne2 c5 b3 cxd4 Bb2 Qa5+ c3 dxc3 Bxc3 Bb4 Rc1 Bxc3+ Nxc3 Nd5 Qd2 Nxc3 Qxc3 Qxa2 Qxc8 Nc6 Qxb7 Na5 Qe4 g6 b4 Nb3 Rb1 Rad8 Bc4 Rd4 Nxd4 Qd2+ Kf1 Nxd4 Qd3 Qf4 Rd1 Nf5 g3 Qc7 Bb3 Qb7 Rg1 Qxb4 Bc2 Qc5 Qf3 Qxc2 Kg2 Qc7 Rc1 Qe7 Rgd1 Qg5 Rb1 Nh4+"
+  },
+  {
+    "rawPuzzleId": "00HoG",
+    "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 Nc3 d6 O-O Nf6 h3 h6 a3 a5 Nd5 O-O Nxf6+ Qxf6 d3 Nd4 Nxd4 Bxd4 c3 Ba7 Be3 Qg6 Bxa7 Rxa7 f4 exf4 Rxf4 Bxh3 Qf3 Bd7 Rf1 Be8 g4 b5 Bd5 c6 Ba2 Rc7 Bb1 Qe6 d4 f6 Qf2 Rcf7 b4 axb4 axb4 g5 Ba2 d5 exd5 cxd5 Rf5 Bc6 Qh2 Kg7 Bb1 Qe3+ Kh1 Qxc3 Qh5 Qxd4 R5f2 Qxb4 Qg6+ Kh8 Rxf6 Rxf6 Qh7#"
+  },
+  {
+    "rawPuzzleId": "00KOz",
+    "moves": "e4 c5 Nf3 e6 d4 cxd4 c3 Nf6 e5 Nd5 cxd4 d6 Nc3 Nxc3 bxc3 Qc7 Bd2 Bd7 Bd3 Bc6 O-O Nd7 Re1 a6 Ng5 Be7 Nxh7 dxe5 Qh5 g6 Bxg6 fxg6 Qxg6+ Kd8 Ng5 Bxg5 Bxg5+ Kc8 Qxe6 exd4 g3 Kb8 Bf4 Qxf4 gxf4 Ka7 cxd4 Rag8+ Kf1 Bb5+ Re2 Re8 d5 Rxe6 dxe6 Nc5 f5 Rxh2 Kg1 Rh5 Re5 Nd3 Rxb5 axb5 e7 Rh8 f6 Ne5 Kg2 Nf7 Re1 Re8 Re6 Kb8 f4 Kc7 f5 Kd7 Rb6 Rg8+ Kf3 Ke8 Rxb7 Nd6 Rb8+ Kf7 Rd8 Ne8 Rb8 Nxf6 Rxb5 Kxe7 a4 Ra8 a5 Nd7 Kf4 Kf6 Rd5 Ra7 Rd6+ Ke7 Re6+ Kf7 a6 Nc5 Rc6 Nxa6 Kg5 Nb4 Rh6 Nd5 Rh7+ Kg8 Rxa7 Ne3 Kg6 Nxf5 Ra8#"
+  },
+  {
+    "rawPuzzleId": "00K0G",
+    "moves": "e4 c5 Nc3 Nc6 Nf3 g6 Be2 Bg7 O-O d6 d3 h6 Bf4 Nf6 h3 O-O Re1 Kh7 Qc1 e5 Bd2 d5 Nxd5 Nxd5 exd5 Qxd5 Nh2 Nd4 c3 Nxe2+ Rxe2 Qxd3 Re3 Qd5 c4 Qc6 b3 h5 Qc2 Bf5 Qd1 Rad8 Qe2 Bh6 Re1 Bxe3 Qxe3 Rxd2 Qxd2 f6 g4 hxg4 hxg4 Be6 Rd1 Rf7 Qe3 Kg7 g5 Rd7 gxf6+ Kxf6 Re1 Qd6 Nf3 Bf5 Nxe5 Rc7 Nf3 Kg7 Qg5 Qf6 Qf4 Rd7 Ne5 Re7 Nf3 b6 Rxe7+ Qxe7 Qe5+ Qxe5 Nxe5 Bb1 a3 Ba2 b4 cxb4 axb4 a5 bxa5 bxa5 c5 a4 Nd3 Be6 Nb4 Kf7 Kf1 Ke7 Ke2 Kd7 Kd2 Kc7 Kc3 Bb3 Kb2 g5 Ka3 g4 Nd3 Bd1 Kb4 Kc6 Ne5+ Kd5 Nd3 Be2 Nb2 a3 Kxa3 Kxc5 Kb3 Kd4 Kc2 Ke4 Kd2 Kf3 Ke1 Bb5 Nd1 Bd3 Ne3 Be4 Nd1 Bc6 Ne3 Ba4 Nd1 Bxd1 Kd2 Kxf2 Kc3 g3 Kd4 g2 Ke5 g1=Q Kd4 Qg4+ Ke5"
+  },
+  {
+    "rawPuzzleId": "0088O",
+    "moves": "e4 e6 d4 d5 Nc3 Bb4 Ne2 Ne7 a3 Bxc3+ Nxc3 O-O Bd3 Nbc6 O-O dxe4 Nxe4 Qxd4 Qh5 h6 Be3 Qd5 Qf3 Nf5 Rad1 Nxe3 fxe3 f5 c4 Qa5 Bb1 Ne5 Qf4 Nxc4 Nf6+ Rxf6 Rd8+ Kh7 Qxc4 Qe5 e4 f4 Qb3 a5 a4 h5 Qh3 b6 Rfd1 Bb7 Rxa8 Bxa8 Qd3 Qxb2 e5+ g6 Bc2 Qxe5 Qd7+ Kh6 Qd8 Qc5+ Kh1 Qxc2 Qh8+ Kg5 h4+ Kf5 Rg1 Bxg2+ Rxg2 Qd1+ Kh2 Qxa4 Qh6 Ke5 Re2+ Kd6 Qf8+ Rxf8"
+  },
+  {
+    "rawPuzzleId": "00C7m",
+    "moves": "e4 e5 Nf3 d6 d4 exd4 Nxd4 Nf6 Nc3 Be7 Be2 O-O Be3 a5 O-O c6 h3 h6 Qd2 Kh7 Rad1 c5 Ndb5 Qb6 Nxd6 Bxd6 Qxd6 Qxd6 Rxd6 Nbd7 Bb5 b6 Rfd1 Ra7 f4 Re8 e5 Nh5 Bxd7 Bxd7 Rxd7 Rxd7 Rxd7 f6 exf6 Nxf6 Rb7 Rxe3 Rxb6 Ne4 Nxe4 Rxe4 Rb5 Rc4 c3 a4 a3 Rxf4 Rxc5 g5 Rc8 Kg7 c4 Kf7 c5 Ke7 Rh8 Rf6 Ra8 Rc6 Rxa4 Rxc5 b4 Rf5 Ra7+ Kf6 a4 h5 b5 Ke6 b6 Kd6 a5 Rb5 Kf2 g4 hxg4 hxg4 Kg3 Rb4 Rc7 Rb5 Ra7 Rb4 Ra8 Kc6 Rc8+ Kb7 Rg8 Rb5 Rxg4 Rxa5 Rg6 Ra4 Kh3 Rb4 g4 Kc8 Kh4 Kd7 Kh5 Ke7 g5 Kf7 Kh6 Rb5 Rg7+ Kf8 Kh7 Rxb6 Ra7 Rb1 Ra8+ Kf7 g6+ Kf6 Ra6+ Ke7 Kg8 Rg1 g7 Ke8 Ra8+ Ke7 Ra7+ Ke8 Ra8+ Ke7 Ra7+ Ke8 Ra8+"
+  },
+  {
+    "rawPuzzleId": "00Ahb",
+    "moves": "e4 c5 Nf3 Nc6 d4 e6 c3 d5 exd5 Qxd5 Bb5 Bd7 O-O O-O-O c4 Qf5 Nc3 Nxd4 Nxd4 cxd4 Bxd7+ Rxd7 Nb5 Kb8 g3 Bc5 Re1 Nh6 Bf4+ Ka8 Re5 Qg4 Qxg4 Nxg4 Rxc5 e5 Bxe5 Nxe5 Rxe5 d3 Rd1 d2 Re2 Rhd8 b3 a6 Nc3 f5 Nd5 b5 Nb6+"
+  },
+  {
+    "rawPuzzleId": "00FF5",
+    "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 d3 Bc5 a3 d6 h3 h6 O-O g5 Nh2 g4 Nxg4 Nxg4 hxg4 Rg8 Qf3 Qe7 Be3 Nd4 Bxd4 Bxd4 c3 Bb6 Kh1 Bxg4 Qg3 Rg5 f3 Rh5+ Qh2 Qh4 Bxf7+ Kxf7 fxg4+ Ke7 gxh5"
+  },
+  {
+    "rawPuzzleId": "00EoE",
+    "moves": "e4 c5 d4 cxd4 Qxd4 Nc6 Qe3 e6 Bd3 Nf6 Nc3 Bb4 Ne2 d5 exd5 Nxd5 Qg3 Nxc3 Qxg7 Nxe2+ Kxe2 Qd4 Qg3 Qe5+ Be3 Nd4+ Kf1 Qxg3 hxg3 Nf5 Bg5 Rg8 Bf6 Rg6 Be5 f6 Bc7 Rg7 c3 Bxc3 bxc3 Rxc7 Bxf5 exf5 Re1+ Kf7 Rxh7+ Kg6 Rxc7 b6 Re8 Ba6+ c4 Rxe8 f3 Re3 Kf2 Ra3 Rxa7 Rxa2+ Kg1 Bxc4 Rxa2 Bxa2 Kf2 b5 Ke3 b4 Kd3 b3 Kc3 Kf7 Kb2 Ke6 Ka3 Kd5 Kb2 Kd4 Ka3 Ke3 Kb2 Kf2 g4 fxg4 fxg4 Kxg2 g5 fxg5 Ka3 g4 Kb2 g3"
+  },
+  {
+    "rawPuzzleId": "00GWg",
+    "moves": "e4 e6 d4 d5 e5 c5 Nf3 Nc6 Be3 Qb6 dxc5 Qxb2 Nbd2 d4 Nc4 Qb4+ Bd2 Qxc5 Bd3 Nxe5 Nfxe5 f6 Nf3 e5 Rb1 e4 Bb4 Qc6 Nxd4 Bxb4+ Rxb4 Qc5 Rb5 Qxd4 Be2 Qxd1+ Bxd1 Ne7 O-O O-O Re1 f5 Re5 Nc6 Rc5 Be6 Nd6 Rab8 c4 Rfd8 Nxb7 Rxb7 Rxc6 Rb2 Bb3 Rbd2 h3 h6 Kh2 R2d3 Rxe6 Kf7 Re3 Rd2 Ra6 Kf8 Rxa7 Rxf2 c5 Rfd2 Rf7+ Ke8 Rc3 R2d3 Rxd3 exd3 c6 d2 c7 Rc8 Rf8+ Kxf8 Bd1 f4 Kg1 Rxc7 Kf2 Rc6 Kf3 Rc1 Kxf4 Rxd1 Kf5"
+  },
+  {
+    "rawPuzzleId": "004kB",
+    "moves": "e4 e5 Nf3 Nc6 Bb5 d6 c3 f5 d4 fxe4 Ng5 Bd7 Nxe4 Nf6 Bg5 Be7 Nxf6+ Bxf6 Bxf6 Qxf6 dxe5 Nxe5 Bxd7+ Nxd7 O-O O-O Qd5+ Kh8 Qxb7 Rae8 Qxc7 Qxf2+"
+  },
+  {
+    "rawPuzzleId": "00IF7",
+    "moves": "e4 c5 Nf3 Nc6 c3 e6 d4 d6 Bb5 a6 Ba4 b5 Bc2 Nf6 O-O Be7 Re1 h6 e5 dxe5 Nxe5 Nxe5 dxe5 Nd5 Nd2 c4 Ne4 Bb7 b4 Qb6 a4 Qc6 axb5 axb5 Rxa8+ Bxa8 Be3 Nxc3 Qf3 Nxe4 Ra1 Ng5 Rxa8+ Kd7 Ra7+"
+  },
+  {
+    "rawPuzzleId": "00Aas",
+    "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 e6 Nc3 Nf6 Ndb5 d5 exd5 exd5 Nxd5 Nxd5 Qxd5 Bb4+ c3 Qe7+ Be2 a6 Bg5 f6 cxb4 axb5 Bd2 Be6 Qxb5 O-O O-O Nd4 Qd3 Rad8 Bd1 Bf5 Qg3 Bc2 Bxc2 Ne2+ Kh1 Nxg3+ hxg3 Rxd2 Bb3+ Kh8 Rae1 Re2 Rc1 Re8 Rfd1 h6 Kh2 Qxb4 Kg1 Re1+ Rxe1 Rxe1+ Kh2 Rxc1 Bd5 Qxb2 Kh3 Rc2 Bf3 Rxf2 Kg4 Rxf3 Kh3 Qxa2 gxf3 Qb3 Kg4 Qe3 f4 b6 Kh3 b5 Kh4 b4 Kh5 b3 Kg6 b2 Kf7 b1=Q Kf8 Qa7"
+  },
+  {
+    "rawPuzzleId": "00KNB",
+    "moves": "Nf3 d5 d4 b5 g3 Nf6 Bg2 Bb7 O-O e6 b3 c5 dxc5 Bxc5 Bg5 Nbd7 Nbd2 O-O e3 h6 Bxf6 Nxf6 Nd4 Qb6 N2f3 b4 Rc1 a5 c4 dxc4 Rxc4 Ba6 Ne5 Rac8 Qf3 Bxc4 Nxc4 Qa7 Nc6 Qc7 Rd1 Nd5 N6e5 Nc3 Re1 Bd6 Nd3 Rfd8 Nf4 Bxf4 gxf4 a4 Kh1 Nxa2 Ne5 axb3 Qg4 b2 Rg1 Qc1 Bf1 g5 Qh5 Rc7 fxg5 b1=Q gxh6+ Kf8 Qg5 Qxf1 Qxd8#"
+  },
+  {
+    "rawPuzzleId": "002KJ",
+    "moves": "e4 c6 d4 d5 e5 c5 c3 Nc6 dxc5 Nxe5 Nf3 Bg4 Be2 Qc7 b4 e6 h4 Nf6 O-O Be7 Kh1 h6 Bf4 Nfd7 Re1 g5 Nxe5 Bxe2 Rxe2 gxf4 Nxd7 Qxd7 Qd4 Rg8 Qxf4 Rg6 Nd2 h5 Nf3 Rg4 Qh2 Qb5 Rae1 Qc4 Rc2 Qf4 Qxf4 Rxf4 Ng5 Rxh4+ Nh3 Kd7 Kh2 Rg8 g3 Rc4 Re3 h4 Rf3 f5 Nf4 hxg3+ Rxg3 Rxg3 fxg3 Bg5 Ng6 Kc6 Ne5+ Kb5 Nxc4 Kxc4 a3 Bf6 Re2 e5 Rf2 f4 gxf4 exf4 Rxf4+ Kxc3 Rxf6 d4 Rd6 d3 Kg2 Kc2 Kf2 d2 Ke2"
+  },
+  {
+    "rawPuzzleId": "009lk",
+    "moves": "d4 d5 c4 e6 g3 f6 h4 Nc6 Bg2 Nge7 Nc3 dxc4 e3 Nd5 Qa4 Bb4 Bd2 Bxc3 bxc3 O-O Qxc4 a6 Ne2 b5 Qxc6 Bd7 Qc5 c6 O-O Qe8 e4 Nc7 Qd6 Rc8 e5 fxe5 Qxe5 Rf7 Nf4 Rf5 Qd6 Nd5 Nd3 Nb6 Ne5 Rd8 Qa3 Nc4 Nxc4 bxc4 Qxa6 Qg6 Qxc4 Rdf8 Be4 Qg4 Bxf5 Rxf5 Qd3 Qh3 Rfe1 Rh5 Qf1 Qg4 Qg2 e5 dxe5 Bf5 Bf4 Be6 Rad1 Bd5 Qh2 Qf3 Rb1 h6 Rb8+ Kh7 Re3 Qe2 Rxe2 Bf3 Rd2 Bg4 Rd7 Be6 Rbb7 Kg6 Rxg7+ Kf5 Rbf7+ Ke4"
+  },
+  {
+    "rawPuzzleId": "00B7G",
+    "moves": "e4 c5 Nf3 e6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Ndb5 d6 Bf4 e5 Bg5 a6 Na3 b5 Bxf6 gxf6 Nd5 Bg7 Bd3 O-O O-O Ne7 Nxe7+ Qxe7 c4 b4 Nc2 Rb8 b3 f5 Ne3 fxe4 Bxe4 f5 Bd5+ Kh8 Rc1 e4 f4 exf3 Qxf3 Bd4 Kh1 Qxe3 Qh5 Qe5 Rce1 Qg7 Rf3 f4 h3 Be5 c5 Bf5 cxd6 Bxd6 Be6 Bg6 Qd5 Bc7 Bg4 Rbd8 Qc4 Bb6 Qxb4 Be3 Qc4 Rd4 Qc5 Rdd8 Qc4 Rde8 Qxa6 Be4 Rff1 h5 Bf3 Bxf3 Rxf3 Bd4 Ref1 Be3 a4 Rg8 Qe2 Qg6 a5 Re5 a6 Rg5 Qb2+ Kh7 g4 hxg4 hxg4 Qh6+ Qh2 Rxg4 Rh3 R4g6 Rxh6+ Rxh6 Qxh6+ Kxh6 b4 Ra8 b5 Kg5 Kg2 Kf5 Rd1 Rb8 Rd5+ Ke4 Rh5 Rg8+ Kh3 f3 Rh7 Kd3 Re7 Ke2 Rd7 Rh8+ Kg4 f2 Rf7 Rg8+"
+  },
+  {
+    "rawPuzzleId": "001xO",
+    "moves": "d4 d5 c4 c6 Nc3 Nf6 cxd5 cxd5 Bf4 Nc6 e3 e6 Bd3 Bd6 Bxd6 Qxd6 Nf3 Bd7 O-O O-O-O Rc1 Kb8 Na4 Rc8 Nc5 Ka8 a3 Rc7 b4 Rhc8 Qb3 Be8 Rc3 Ne7 Rfc1 b6 Ba6 bxc5 Bxc8 c4 Qc2 Rxc8 Nd2 Qd7 e4 Qa4 Qb1 Ng6 exd5 exd5 Re1 Bd7 h3 Be6 Qb2 Nf4 Rce3 Nd3"
+  },
+  {
+    "rawPuzzleId": "006om",
+    "moves": "e4 c5 Nf3 Nc6 c3 d5 exd5 Qxd5 d4 Bg4 dxc5 Bxf3 Qxf3 Qxf3 gxf3 a5 Bb5 e6 b4 Nf6 a3 Be7 O-O Nd5 Bxc6+ bxc6 Bd2 Bf6 Ra2 O-O c4 Nc7 Rc2 Rfd8 Bc3 Rd3 Kg2 Rb8 bxa5 Na6 Bxf6 gxf6 Rc3 Rd4 Rc2 Nxc5 Nc3 Rxc4 Rfc1 Nd3 Rd1 Nf4+ Kg3 Nd5 Rdc1 Kf8 Ne4 Ra4 Rxc6 Rxa5 Rc8+ Rxc8 Rxc8+ Kg7 Nc3 Nb6 Rc6 Nd7 a4 h5 f4 f5 Rc4 Nf6 Kf3 h4 h3 Kf8 Rb4 Rc5 Rb3 Rc4 Ra3 Ne4 Nxe4 fxe4+ Ke3 f5 a5 Rc7 a6 Ra7 Kd4 Ke7 Kc5 Kd7 Kb6 Ra8 Kb7 Rc8 a7 Rc7+ Kb6 Rc6+ Kb5 Rc8 a8=Q Rxa8 Rxa8 Kd6 Kc4 e5 Ra6+ Ke7 fxe5 f4 Kd4 e3 fxe3 f3 Rf6 f2 Rxf2 Ke6 Ke4 Ke7 Kd5 Ke8 Rf6 Ke7 e4 Ke8 Kd6 Kd8 Rf8#"
+  },
+  {
+    "rawPuzzleId": "00KYC",
+    "moves": "e4 g6 d4 Bg7 Nf3 c5 c3 d5 e5 Nc6 Bb5 cxd4 Bxc6+ bxc6 cxd4 Ba6 Nc3 Nh6 Ne2 O-O O-O f6 Re1 Nf7 Ng3 fxe5 Nxe5 Nxe5 dxe5 Qb6 Qc2 c5 Be3 d4 Bg5 e6 b3 c4 bxc4 Rac8 Rab1 Qc5 Qa4 Bxc4 Ne4 Qc6 Nf6+ Bxf6 Qxc6 Rxc6 Bxf6 d3 Rb7 Rxf6 exf6 d2 Reb1 Bxa2 Rg7+"
+  },
+  {
+    "rawPuzzleId": "002Ua",
+    "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 e5 Nf3 Nf6 Bc4 Nxe4 O-O Bc5 Nbd2 Nxd2 Bxd2 O-O Bc3 d6 a4 Bg4 a5 Nd4 b4 Bxf3 gxf3 Qf6 bxc5 Nxf3+ Kh1 Qf4 Kg2 Qg4+ Kh1 Qh3"
+  },
+  {
+    "rawPuzzleId": "00MHi",
+    "moves": "e4 c5 Nf3 e6 c4 Nc6 Nc3 a6 a4 Nf6 d4 cxd4 Nxd4 Nxd4 Qxd4 Qc7 Be2 d6 Bg5 e5 Qe3 Be7 Bxf6 Bxf6 Nd5 Qd8 b4 Bg5 Qg3 Bf6 Rd1 O-O c5 Bh4 Qf3 Be7 Nxe7+ Qxe7 cxd6 Qe6 O-O Bd7 Qg3 Bxa4 Rd5 Bd7 Qxe5 Qxe5 Rxe5 Rfe8 Rxe8+ Rxe8 Bd3 Re6 e5 Rxe5 f4 Rd5 Be4 Rxd6 Bxb7 Bb5 Rc1 g6 Rc8+ Kg7 Ra8 Rd4 Bxa6 Bxa6 Rxa6 Rxb4 g3 Rb2 h4 h5 Ra7 Rc2 Re7 Kf6 Re3 Kf5 Kf1 f6 Re2 Rc1+ Kf2 Kg4 Re6 Rc2+ Ke3 Rc3+ Ke4 f5+ Kd4 Kxg3 Kxc3 Kxf4 Rxg6 Kf3 Rg5 f4 Kd2 Kf2 Rxh5 f3 Rf5 Kg3 h5 f2 Rxf2 Kxf2 h6"
+  },
+  {
+    "rawPuzzleId": "00BKa",
+    "moves": "e4 e6 d4 d5 Nc3 Bb4 Bd2 dxe4 Nxe4 Qxd4 Ne2 Qxe4 Bxb4 Qxb4+ c3 Qxb2 g3 Nf6 Qa4+ Bd7 Qd1 O-O Bg2 Nc6 Rb1 Qxa2 Rxb7 Rab8 Rxc7 Rb1 Nc1 Rc8 Rxc8+ Bxc8 Bxc6 Ba6 Qd8+"
+  },
+  {
+    "rawPuzzleId": "006NL",
+    "moves": "d4 b6 e4 Bb7 Bd3 e6 Nc3 g6 f4 Bg7 Nf3 d6 Be3 Ne7 Qd2 Nbc6 a3 d5 e5 a6 g4 Qd7 O-O-O O-O-O Qe2 b5 Ng5 Rdf8 h4 h5 gxh5 Rxh5 Qg2 f5 Be2 Rhh8 Bf3 Na5 Ne2 Nc4 Qf2 Kb8 Bd2 Ka7 Bb4 Re8 Kb1 Rc8 Nc1 c5 Bxc5+ Rxc5 dxc5 Bc6 Nf7 Rf8 Ng5 Rb8 Nb3 b4 Nd4 bxa3 Nxc6+ Nxc6 b3 N4a5 Ka2 Bf8 Rd4 Rb5 Kxa3 Bxc5+"
+  },
+  {
+    "rawPuzzleId": "00EJb",
+    "moves": "Nf3 Nf6 d4 e6 Bg5 d5 e3 c5 c4 Nc6 Bd3 dxc4 Bxc4 Be7 O-O O-O Bxf6 Bxf6 Nc3 cxd4 exd4 Nxd4 Nxd4 Qxd4 Qb3 Qb6 Qc2 Bd7 Rad1 Bc6 Bd3 h6 b3 Rac8 Bc4 a6 Ne4 Be5 Qe2 Bxe4 Qxe4 Bf6 Rd7 Rfd8 Rxb7 Qa5 a4 Rd4 Qe2 Rcd8 g3 Rd2 Qe4 Qc5 Qe3 Qd6 Rb6 Qa3 Rxa6 Qb2 Rc6 Bd4 Qe1 Rxf2 Rxf2 Bxf2+ Qxf2 Rd1+ Kg2 Rd2 Rc8+ Kh7 Bd3+ g6 Bxg6+ fxg6 Rc7+ Kg8 Rc8+ Kg7 Rc7+ Kh8 Rc8+ Kg7 Rc7+ Kh8 Rc8+ Kg7"
+  },
+  {
+    "rawPuzzleId": "00LBF",
+    "moves": "e4 g6 Nc3 Bg7 g3 c5 Bg2 Nc6 d3 e6 f4 Nge7 e5 d6 exd6 Qxd6 Nf3 a6 O-O O-O Be3 b6 Ne4 Qc7 c3 Bb7 Qc2 Nf5 Bf2 Rad8 Rac1 h5 h3 Nce7 Rfd1 Nd5 Qe2 h4 g4 Nxf4 Qe1 Nxg2 Kxg2 Nd6 Nxd6 Qxd6 Bxh4 Qf4 Qe2 Rd7 Bg3 Qh6 Kh2 Rfd8 Ne5 Rd5 Rc2 Qg5 Nf3 Qe7 Rcd2 e5 d4 cxd4 Rxd4 Qd7 Nxe5 Qe6 Rxd5 Rxd5 Re1 f6 Nxg6 Qxe2+ Rxe2 Rd1 Bd6 Kf7 Re7+ Kxg6 Rxb7 Rxd6 Ra7 a5 Kg3 Bh6 b4 axb4 cxb4 Bd2 b5"
+  },
+  {
+    "rawPuzzleId": "00JYV",
+    "moves": "e4 e5 Nf3 Nc6 Bb5 d6 Bxc6+ bxc6 O-O Bg4 h3 Bh5 g4 Bg6 Nc3 Nf6 d3 Be7 Kg2 O-O Nh4 Nxe4 Nxg6 Nxc3 bxc3 hxg6 f4 exf4 Bxf4 Bf6 Qd2 Re8 Rab1 Rb8 Rxb8 Qxb8 c4 c5 Qa5 Re2+ Rf2 Re1 Qa4 Qb1 Bh2 Bd4 Rd2 Rg1+ Bxg1 Qxg1+ Kf3 Qe3+ Kg2 Qxd2+ Kf1 Qf2#"
+  },
+  {
+    "rawPuzzleId": "00FHX",
+    "moves": "e4 c6 Nf3 d5 exd5 cxd5 d4 Nc6 Bb5 Nf6 Bg5 a6 Bxc6+ bxc6 Nc3 Bf5 O-O e6 Ne5 Rc8 Bxf6 Qxf6 Qf3 Be7 a4 Bxc2 Qxf6 Bxf6 Rac1 Bf5 b4 Bxe5 dxe5 Rb8 b5 cxb5 axb5 axb5 f3 b4 Na4 b3 Rf2 O-O Rb2 Bc2 Nc5 Rfc8 Nd7 Rb7 Nf6+ gxf6 exf6 Ra7 h4 Ra2 Rxa2 bxa2 h5 Bb1 Rxc8#"
+  },
+  {
+    "rawPuzzleId": "006wz",
+    "moves": "e4 c5 e5 Nc6 Nf3 g6 c3 Bg7 d4 cxd4 cxd4 d6 Bb5 dxe5 d5 a6 dxc6 axb5 Qxd8+ Kxd8 cxb7 Bxb7 Nbd2 e4 Ng5 Ke8 Ngxe4 Bxe4 Nxe4 Nf6 Nxf6+ Bxf6 O-O Kf8 a3 Kg7 Rb1 Rhc8 Rd1 Rc2 b4 Rac8 Be3 Bb2 Rd7 Bxa3 Rxe7 Bc1 Bd4+ Kf8 Rb7 Bb2 Bc5+ Kg7 Rxb5 Rc1+ Rxc1 Bxc1 Rb7 Bf4 g3 Bd6"
+  },
+  {
+    "rawPuzzleId": "003Jb",
+    "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Bc4 Bg7 Bb3 O-O Be3 Nc6 f3 Nxd4 Bxd4 Bd7 Qd2 b5 h4 a5 a4 b4 Nd5 Nxd5 Bxd5 Bxd4 Qxd4 Rc8 h5 e6 hxg6 fxg6 Bb3 Qe7 O-O-O Rc6 Rh6 Rf7 Qa7 Qg5+"
+  },
+  {
+    "rawPuzzleId": "00Knu",
+    "moves": "e4 d6 d4 Nf6 Nc3 c6 Nf3 Bg4 Bc4 e6 O-O h6 h3 Bh5 d5 e5 dxc6 bxc6 Qd3 Nbd7 Ne2 Nc5 Qe3 Ncxe4 Ng3 Nxg3 fxg3 Be7 g4 Bg6 Bb3 O-O g5 hxg5 Qxg5 Ne4 Qxg6 d5 Qxc6 Rc8 Qxd5 Bc5+ Kh2 Nf2 Qxd8 Rcxd8 Bg5 Rd6 Bh4 Ne4 Rfe1 Nf6 Rxe5 Bb6 Bxf6 Rxf6 Ree1 Rg6 Rad1 Kh8 Rd7 Bf2 Re2 Bg3+ Kh1 a5 a4 f6 Rde7 Rd8 Re8+ Rxe8 Rxe8+ Kh7 c3 Kh6 Rh8#"
+  },
+  {
+    "rawPuzzleId": "007AS",
+    "moves": "e4 c6 d4 d5 e5 Bf5 Ne2 e6 Ng3 Bg6 c4 Ne7 Nc3 Nd7 Bg5 Qb6 Qd2 h6 c5 Qc7 Be3 b6 b4 a5 cxb6 Qxb6 bxa5 Qxa5 Be2 c5 Nb5 Qxd2+ Bxd2 Rb8 Nd6+ Kd8 Bh5 Kc7 Nxf7 Bxh5 Nxh5 Rh7 Nf4 cxd4 Nxe6+ Kb7 Nd6+ Ka7 f4 g5 fxg5 Nxe5 O-O N7g6 Nxf8 Rxf8 gxh6 Nc4 Bb4 Rxf1+ Rxf1 Rxh6 Rf6 d3 Nxc4 dxc4 Bd2 Rh5 Rxg6 Rc5 Bc3 Rd5 Rc6 d2 Bxd2 Rxd2 Rxc4 Rxa2 Rb4 Ka6 h4"
+  },
+  {
+    "rawPuzzleId": "00Htd",
+    "moves": "d4 e6 c4 d5 Nc3 c5 cxd5 exd5 Nf3 a6 dxc5 Nf6 Bg5 Be7 Bxf6 Bxf6 Qxd5 O-O Qb3 Be6 Qxb7 Nd7 e3 Bxc3+ bxc3 Nxc5 Qb4 Nd7 Be2 Rb8 Qf4 Rb2 Bxa6 Qa5 O-O Qxa6 Nd4 Rxa2 Rad1 Bc4 Rfe1 Nc5 Nf5 Nd3 Qg4 g6 Ne7+ Kg7 Qd4+ f6 Qd7 Rxf2 Rxd3 Qa2 Nxg6+ Kxg6 Qg4+ Kf7 Rd7+ Ke8 Red1 Rxg2+ Qxg2"
+  },
+  {
+    "rawPuzzleId": "00LoE",
+    "moves": "d4 c5 dxc5 Qa5+ c3 Qxc5 Nd2 e5 Nb3 Qc7 h3 Nf6 Bg5 Be7 e3 a6 g4 Nc6 Bg2 h6 Bh4 d6 Qc2 Nb4 Qd1 Nc6 g5 hxg5 Bxg5 Be6 Ne2 Rh5 Bxf6 Bxf6 Ng3 Rh8 Ne4 Be7 Qe2 f5 Ng3 e4 Nd4 Nxd4 exd4 Bc4 Qc2 Bd3 Qd2 O-O-O Bf1 Bxf1 Nxf1 d5 O-O-O Rh5 Kb1 Rdh8 Ng3 Rxh3 Rxh3 Rxh3 Nxf5 Rd3 Qe2 Bf6 Rxd3 exd3 Qxd3 Qf4 Ne3 Qxf2 Nxd5 Qf1+ Qxf1"
+  },
+  {
+    "rawPuzzleId": "001gi",
+    "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 e5 Nf3 Nf6 Nc3 Be7 Bg5 Nc6 Bxf6 Bxf6 Nd5 Qa5+ c3 Bd8 b4 Qa3 Qc2 Bg4 Nd2 a5 Nc4 axb4 Nxa3 bxc3 Qxc3 Ba5 Nc7+ Kd7 Nxa8 Bxc3#"
+  },
+  {
+    "rawPuzzleId": "00D12",
+    "moves": "d4 f5 Nf3 Nf6 g3 e6 Bg2 Nc6 O-O d5 c4 Be7 b3 O-O Ba3 Ne4 Bxe7 Qxe7 Nbd2 Qf6 e3 b6 Ne1 Bb7 Nd3 a5 Nf3 Ng5 Nfe5 Nxe5 Nxe5 Rad8 Rc1 Nf7 f4 Nxe5 fxe5 Qf7 Qc2 Rc8 cxd5 Bxd5 Bxd5 exd5 Rf2 Qe6 Rcf1 c5 Rxf5 Rxf5 Qxf5 Qxf5 Rxf5 c4 Rf2 c3 Rc2 b5 a3 b4 axb4 axb4 Kf1 Kf7 Ke2 Ke6 Kd3 Kf5 h3 Ra8 g4+ Ke6 e4 Ra3 exd5+ Kxd5 Re2 Rxb3 e6 Rb2 e7 Rxe2 Kxe2 c2 Kd2 b3 e8=Q Kxd4"
+  },
+  {
+    "rawPuzzleId": "003IX",
+    "moves": "e4 b6 d4 Bb7 Nc3 e6 Nf3 Bb4 Bd3 Nf6 e5 Bxc3+ bxc3 Bxf3 Qxf3 Nd5 Be4 c6 O-O O-O Qh3 g6 Qh6 Kh8 Bg5 f6 Bxd5 fxg5 Be4 Rf5 Bxf5 exf5 Rab1 Na6 Rfe1 Nc7 f4 Ne6 fxg5 Qxg5 Qxg5 Nxg5 Kf2 Ne4+ Kg1 Nxc3 Rb2 Ne4 g3 Kg7 Kg2 Kf7 h4 Ke6 Rd1 h5 Rb3 Rb8 c3 a5 a4 g5 hxg5 Nxg5 Rdb1 b5 axb5 cxb5 Rxb5 Rc8 R1b3 a4 Ra3 Rg8 Rxa4 Ne4 Ra6+ Ke7 c4 Nxg3 Kf3 Ne4 Kf4 Rg4+ Kxf5 Nd2 e6 Nxc4 exd7 Nd6+ Rxd6 Kxd6 d8=Q+ Kc6 Qd5+ Kc7 Rb7+ Kc8 Qd7#"
+  },
+  {
+    "rawPuzzleId": "00J7i",
+    "moves": "Nf3 d5 g3 Nf6 Bg2 Nc6 O-O e5 d3 Bc5 Nxe5 Nxe5 d4 Bd6 dxe5 Bxe5 Nc3 c6 e4 Bxc3 bxc3 Nxe4 Ba3 Be6 Re1 c5 c4 O-O cxd5 Nc3 Qf3 Nxd5 Bxc5 Re8 Rad1 Qa5 Bd4 Rad8 c4 Ne7 Bc3 Qc5 Rxd8 Rxd8 Qxb7 Ng6 Rxe6 fxe6 Qxg7#"
+  },
+  {
+    "rawPuzzleId": "004Op",
+    "moves": "c4 e6 Nc3 b6 d4 Bb7 f3 Nc6 e4 d6 Be3 h6 Bd3 Nf6 Nge2 Be7 Qd2 a6 O-O g5 h3 Nh7 f4 Qd7 d5 Nb4 Bb1 a5 a3 Na6 dxe6 fxe6 e5 O-O-O exd6 Bxd6 Qe1 Nc5 b4 Na4 Nxa4 Qxa4 c5 gxf4 Nxf4 Bxf4 Bxf4 Qc6 Rf2 Rhg8 Qf1 Nf6 cxb6 Qxb6 Ba2 Rxg2+ Qxg2 Bxg2 Kxg2 Rg8+ Kf3 Qc6+ Ke2 Qc2+ Ke3 Qc3+ Ke2 Qxa1"
+  },
+  {
+    "rawPuzzleId": "00MGA",
+    "moves": "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O b5 Bb3 Be7 Re1 d6 c3 O-O h3 Nb8 d4 Nbd7 Nbd2 Bb7 a4 Re8 Ng5 Rf8 Ngf3 h6 Bc2 Re8 Nf1 Bf8 Ng3 g6 Nh2 Bg7 h4 Nf8 d5 c6 h5 cxd5 exd5 Bxd5 Ng4 Nxg4 Qxd5 Qh4 hxg6 Ne6 gxf7+ Kxf7 axb5 Kf6 Ne4+ Kf7 Nxd6+ Kg8 g3 Qh2+ Kf1 Qxf2#"
+  },
+  {
+    "rawPuzzleId": "006yP",
+    "moves": "e4 Nf6 e5 Ng8 d4 d5 f4 Nh6 Nf3 Bf5 Be3 e6 h3 Nd7 Nbd2 a6 g4 Bg6 Bd3 c5 Bxg6 hxg6 c3 Rc8 Rg1 Be7 Qe2 Qa5 Nb3 Qb5 Qxb5 axb5 Nxc5 Nxc5 dxc5 Bxc5 Bxc5 Rxc5 a3 Ng8 Rg3 Ne7 Nd4 Nc6 Rd1 Nxd4 Rxd4 Rc4 Kd2 Kd7 Kc2 Rcc8 Kb3 Kc6 Kb4 Rh4 f5 Rch8 fxe6 fxe6 Rdd3 g5 Rgf3 R4h6 Rf7 Rxh3 Rxh3 Rxh3 Rxg7 Rh2 b3 Re2 Rxg5 Re4+ Ka5 b6+ Ka6 Re3 Rg8 Rxc3 Rc8+ Kd7 Rxc3"
+  },
+  {
+    "rawPuzzleId": "004BW",
+    "moves": "e4 c5 Nf3 d6 b3 Nf6 e5 dxe5 Nxe5 Nbd7 Bb2 Qc7 f4 e6 Qf3 Bd6 Qe3 Nd5 Qg3 N7f6 Qxg7 Rg8 Bb5+ Kd8 Nxf7+ Ke7 Bxf6+ Nxf6 Qh6 Kxf7 O-O Rg6 Qh4 Bd7 Bxd7 Qxd7 Nc3 Rag8 g3 c4 Rae1 Bc5+ Kg2 Qc6+ Kh3 Bf8 Ne4 Rh6 Ng5+ Kg6 Qxh6+ Bxh6 Rxe6 Qd7 Re1 Bxg5 fxg5 Kxg5 Re5+ Kg6 Kg2 Re8 Rxe8 Nxe8 bxc4 Qxd2+ Kh3 Nf6 Re6 Qd7"
+  },
+  {
+    "rawPuzzleId": "00Kd8",
+    "moves": "c4 e5 Nc3 c5 e4 d6 Nf3 h6 d3 Nf6 Be2 Be7 O-O Bg4 h3 Bh5 Nh4 Bxe2 Qxe2 Nbd7 Nf5 O-O Nxe7+ Qxe7 f4 exf4 Bxf4 Ne5 Rae1 Rad8 Nd5 Nxd5 exd5 f6 b3 Qd7 Qd1 Rde8 d4 cxd4 Qxd4 b6 Re3 Rc8 Rg3 Kh8 Qd2 Qe7 Re1 Qf7 Kh1 Rce8 Rge3 Qh5 Qc2 Kg8 Qc3 Rc8 Qb4 Qf5 Bh2 Rc5 Qa3 Rf7 Qb2 Kh7 Qe2 a5 Rf1 Qd7 Rc1 Qc7 Rec3 Re7 a3 Kg8 Qf1 b5 b4 axb4 axb4 Rxc4 Rxc4 bxc4 Bxe5 Rxe5 Rxc4 Qe7 Rc8+ Kf7 Qd3 Re1+ Kh2 Qe5+ Qg3 Qxg3+ Kxg3 Rb1 Rb8 Kg6 b5 Kf5 b6 g5 b7 Rb5 Rd8 Rxb7 Rxd6 h5 Rd8 h4+ Kf3 Rb3+ Kf2 Rd3 d6 Kf4 d7 f5 Ke2 Rd6 Kf2 g4 hxg4 Rd2+ Kg1 Kg3 Kf1 fxg4 Ke1 Rd6 Kf1 Rd4 Ke2 Kxg2 Rg8 g3 d8=Q Rxd8 Rxd8 h3 Rd2 h2 Ke1+ Kh3 Rd8 h1=Q+ Ke2 Qg2+ Kd3 Qf3+ Kc4 Qf4+ Rd4 Qxd4+ Kxd4 g2"
+  },
+  {
+    "rawPuzzleId": "00M7w",
+    "moves": "e4 d5 exd5 Qxd5 Nc3 Qa5 d3 Nf6 Bd2 Nc6 g3 e5 Bg2 Qb6 Nd5 Nxd5 Bxd5 Qxb2 Rb1 Qd4 c4 Bc5 Qf3 f6 Qh5+ g6 Be3 Qc3+ Bd2 Qxd3 Qd1 Nd8 Rb3 Qf5 Bg2 Qxf2#"
+  },
+  {
+    "rawPuzzleId": "00Er4",
+    "moves": "e4 c6 Nf3 d5 exd5 cxd5 d4 Nc6 Bb5 Nf6 Nc3 Bg4 Be3 e6 O-O Bd6 h3 Bh5 Qd2 Bc7 Ne5 Qd6 Bxc6+ bxc6 Bf4 Nd7 Rfe1 f6 Nxd7 Qxf4 Rxe6+ Kxd7 Qxf4 Bxf4 Rae1 Rae8 Rxe8 Rxe8 Rxe8 Kxe8 g3 Bc1 b3 Bb2 Na4 Bxd4 c3 Bb6 Nxb6 axb6 g4 Bg6 f4 Bb1 a4 Ba2 b4 Kd7 Kf2 Kc7 Ke3 c5 b5 Bb3 Kd3 Bxa4 c4 d4 Ke4 Bb3 Kd5 d3"
+  },
+  {
+    "rawPuzzleId": "004Ys",
+    "moves": "e4 c5 f4 d6 e5 dxe5 fxe5 Nc6 Nf3 Bg4 Bb5 e6 Ba4 Ne7 Bxc6+ Nxc6 O-O Bxf3 Qxf3 Qd7 Re1 g6 d3 Bg7 Bf4 O-O Nc3 a6 h4 b5 Qh3 b4 Ne4 Nxe5 h5 Nc6 Ng5 Qd4+ Be3 Qf6 hxg6 fxg6"
+  },
+  {
+    "rawPuzzleId": "009Os",
+    "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 e5 Ndb5 d6 Nd5 Nxd5 exd5 Nb8 c4 a6 Nc3 Be7 Bd3 O-O O-O f5 f3 Nd7 b4 Qb6+ Kh1 Qxb4 Qc2 Nc5 Be2 f4 Rb1 Qa5 Bd2 Qc7 Ne4 Nxe4 fxe4 g5 Qd1 Bd8 Rc1 Rf6 Bg4 Bxg4 Qxg4 Rh6 g3 Qf7 gxf4 exf4 Rxf4 Rh4 Qg3 Rxf4 Bxf4 Qxf4 Qg2 Bf6 Rf1 Qe5 Rf5 Qa1+ Rf1 Qd4 Qh3 Re8 Qf5 Kg7 h4 Qxe4+ Kh2 Qxh4+ Kg2 Re2+ Kf3 Qh5+ Kg3 Be5+"
+  },
+  {
+    "rawPuzzleId": "00LH7",
+    "moves": "e4 e5 Nf3 Nc6 Nc3 Bc5 Nxe5 Bxf2+ Kxf2 Nxe5 d4 Qf6+ Kg1 Ne7 Be3 N5g6 Bc4 c6 Qd2 d5 exd5 Nxd5 Nxd5 cxd5 Bxd5 O-O Rf1 Qd6 Bb3 b5 h4 a5 c3 a4 Bc2 f5 h5 Ne7 h6 g6 Bf4 Qd5 b3 Nc6 bxa4 bxa4 Bd1 Bb7 Bf3 Qc4 Rb1 Rf7 Be2 Qd5 Bf3 Qd7 Kh2 Re8 Rhe1 Rxe1 Rxe1 Na5 Bxb7 Nxb7 Qe3 Nd6 Be5 Ne4 Qd3 Qd8 Qh3 Qd5 Bg7 Rc7 Qe3 Rxc3 Qf4 Qd6 Rxe4 Qxf4+ Rxf4 Kf7 Rf2 Rd3 Re2 g5 Kg1 f4 Kf2 Kg6 Re6+ Kf5 Rf6+ Kg4 Re6 Rd2+ Re2 Rd3 Be5 Kh5 Bg7 Kg4 Ke1"
+  },
+  {
+    "rawPuzzleId": "0042j",
+    "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 d6 f3 e5 Ndb5 a6 Na3 b5 Nd5 Be6 Bg5 Be7 Bxf6 Bxf6 c3 Bh4+ g3 Bg5 Bg2 Rc8 Nc2 Bxd5 Qxd5 O-O Rd1 Qa5 O-O Rfd8 f4 exf4 gxf4 Bf6 Ne3 Qb6 Rf3 Ne7 Qd2 Rc4 e5 dxe5 Qxd8+"
+  },
+  {
+    "rawPuzzleId": "00GAf",
+    "moves": "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Ne5 Nc3 Bb4 Bf4 Ng6 Qf3 Bxc3+ bxc3 Nxf4 Qxf4 Ne7 Bd3 O-O O-O Ng6 Qg3 d6 e5 Nxe5 h4 Nxd3 cxd3 c5 Nf3 Qf6 d4 c4 Rab1 b6 Rb5 Be6 Rg5 h6 Rb5 d5 Re1 Rfd8 Nh2 Rd6 h5 Bd7 Rb4 a5 Rb2 a4 a3 Be6 Rc2 Qf5 Rce2 Qxh5 Re5 Qg6 Qxg6 fxg6 Rxe6 Rxe6 Rxe6 b5 Rb6 Re8 Rxb5 Re1+ Nf1 Rc1 Rxd5 Rxc3 Rc5 Rxa3 d5 c3 d6 c2 Rxc2 Rd3 Rc6 a3 Ra6 Kf7 Ne3 Ke6 Nc4 Kd7 g3 g5 Kg2 h5 Ne5+"
+  },
+  {
+    "rawPuzzleId": "00LZf",
+    "moves": "d4 e6 e4 Qh4 Nf3 Qxe4+ Be3 Nc6 Bd3 Qg4 O-O Nge7 Be2 Nd5 Ne5 Nxe3 Bxg4 Nxd1 Rxd1 h5 Nxc6 bxc6 Bf3 Rb8 b3 d5 Nd2 Ba6 c4 Be7 cxd5 cxd5 Nf1 Kd7 Ng3 h4 Nh5 h3 gxh3 g6 Ng3 Rxh3 Bg2 Rh7 Nf1 Rh4 Ng3 Bf6 Rac1 Rxd4 Rxd4 Bxd4 Rd1 Be5 Ne4 Be2 Rd2 Bg4 h3 Bf5 Nc5+ Kd6 Ne4+ Kc6 Ng3 Bc3 Rd1 Kd7 Nxf5 gxf5 Rc1 Bb2 Rc2 Be5 Kf1 Rh8 Re2 Bd6 Rc2 Bb4 Re2 Bc5 Rc2 Bxf2"
+  }
+]

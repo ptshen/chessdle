@@ -1,0 +1,27 @@
+# Vercel installs dependencies and builds from source.
+node_modules/
+dist/
+.git/
+.vercel/
+
+# Supply public browser configuration through Vercel environment variables.
+.env*
+*.local
+
+# Local tooling, credentials, and generated reports.
+.agents/
+.codex/
+.aws/
+.supabase/
+supabase/.temp/
+supabase/.branches/
+.cache/
+.npm/
+.DS_Store
+test-results/
+playwright-report/
+coverage/
+*.log
+
+# Keep vendor/, public/engine/, scripts/copy-engine.mjs, and source tests:
+# the build uses the vendored libraries and type-checks all of src/.

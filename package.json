@@ -1,0 +1,39 @@
+{
+  "name": "chessdle",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Seven daily chess positions. How well can you read the board?",
+  "scripts": {
+    "predev": "node scripts/copy-engine.mjs",
+    "dev": "vite",
+    "prebuild": "node scripts/copy-engine.mjs",
+    "build": "tsc --noEmit && vite build",
+    "test": "vitest run",
+    "test:data": "node --test scripts/lib/puzzle-data.test.mjs",
+    "check:supabase": "node scripts/verify-supabase.mjs",
+    "test:supabase": "node --test scripts/lib/supabase-check.test.mjs",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "chess.js": "file:vendor/chess.js",
+    "lucide-react": "0.525.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "10.4.1",
+    "@testing-library/react": "16.3.2",
+    "@types/node": "22.20.1",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "jsdom": "20.0.3",
+    "playwright": "1.53.2",
+    "typescript": "5.9.3",
+    "vite": "7.3.1",
+    "vitest": "3.2.4"
+  }
+}

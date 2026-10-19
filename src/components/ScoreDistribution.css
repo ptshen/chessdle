@@ -1,0 +1,11 @@
+.score-distribution { width: 100%; margin: 12px 0 0; }
+.score-distribution svg { display: block; width: 100%; height: auto; overflow: visible; }
+.score-distribution-curve { fill: none; stroke: var(--green, #345b44); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+.score-distribution-axis { stroke: #a6b79d; stroke-width: 1; }
+.score-distribution-tick { fill: #5b6c55; font-size: 12px; font-variant-numeric: tabular-nums; }
+.score-distribution-marker-line { stroke: #345b44; stroke-width: 1; stroke-dasharray: 3 4; opacity: .65; }
+.score-distribution-marker { fill: #345b44; stroke: #f5f8ef; stroke-width: 2; }
+.score-distribution-label-bg { fill: #345b44; }
+.score-distribution-label { fill: #fffef8; font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.score-distribution figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 10px; color: #5b6c55; font-size: 10px; line-height: 1.5; text-align: left; }
+.daily-ranking .score-distribution-unavailable { margin-top: 12px; color: var(--muted, #667361); font-size: 11px; }
