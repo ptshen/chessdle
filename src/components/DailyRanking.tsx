@@ -103,7 +103,6 @@ export function DailyRanking({ state, currentScore, refresh }: ReturnType<typeof
       <p className="ranking-headline">{percentile === null
         ? 'You’re the first to finish!'
         : <>Better than <strong>{percentile}%</strong> of {today ? 'today’s' : 'that day’s'} other players</>}</p>
-      <p className="ranking-detail">{rank.tiedPlayers > 1 ? 'Tied ' : ''}#{rank.rank.toLocaleString()} of {rank.totalPlayers.toLocaleString()} {rank.totalPlayers === 1 ? 'player' : 'players'} · {today ? 'so far' : rank.day}</p>
       <ScoreDistribution distribution={rank.distribution} score={rank.score} totalPlayers={rank.totalPlayers} />
       {rank.score.toFixed(2) !== currentScore.toFixed(2) && <p className="ranking-detail">Ranked score: {rank.score.toFixed(2)} · first result</p>}
       {state.stale && <p className="ranking-detail">Update unavailable. {retry}</p>}

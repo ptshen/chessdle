@@ -134,8 +134,8 @@ never alters the saved answer or score. Each result also links to its source.
 
 The seventh daily answer submits the seven round penalties to Postgres using a
 persistent anonymous Supabase Auth session. No sign-up screen is needed. The
-results screen shows the player's rank, participant count, percentage of
-other finishers they scored better than, and a smooth score distribution with
+results screen shows the percentage of other finishers the player scored better
+than, and a smooth score distribution with
 their saved score marked. “✓ Saved” appears only after Supabase confirms the
 stored result. Practice scores stay on the device.
 Rankings refresh every minute while the page is visible, on return to the tab,

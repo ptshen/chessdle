@@ -153,7 +153,6 @@ describe('playing Chessdle', () => {
     expect(savedGame().finished).toBe(true)
     fireEvent.click(await screen.findByRole('button', { name: 'See my results' }))
     expect(await screen.findByText('66.7%')).toBeTruthy()
-    expect(screen.getByText('#2 of 4 players · so far')).toBeTruthy()
     expect(screen.getByText('✓ Saved')).toBeTruthy()
     expect(screen.getByText('You · 2.00')).toBeTruthy()
     expect(screen.getByText('Normal estimate')).toBeTruthy()

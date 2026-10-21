@@ -97,7 +97,7 @@ describe('daily percentile', () => {
     view.rerender(<Harness game={{ ...game, finished: true }} />);
     expect(await screen.findByText(/Better than/)).toBeTruthy();
     expect(screen.getByText('75%')).toBeTruthy();
-    expect(screen.getByText('#2 of 5 players · so far')).toBeTruthy();
+    expect(screen.queryByText(/#\d+ of \d+ players?/)).toBeNull();
     expect(screen.getByText('✓ Saved')).toBeTruthy();
     expect(submitDailyScore).toHaveBeenCalledTimes(1);
   });
@@ -126,19 +126,17 @@ describe('daily percentile', () => {
     });
     render(<Harness game={completedGame()} />);
     expect(await screen.findByText('You’re the first to finish!')).toBeTruthy();
-    expect(screen.getByText('#1 of 1 player · so far')).toBeTruthy();
     expect(screen.getByText('Normal estimate')).toBeTruthy();
     expect(screen.getByRole('img', { name: /Daily score distribution/ })).toBeTruthy();
     expect(screen.queryByText(/%/)).toBeNull();
   });
 
-  it('shows tied ranks and preserves a zero percentile', async () => {
+  it('preserves a zero percentile for tied scores', async () => {
     vi.mocked(submitDailyScore).mockResolvedValue({ ...rank, rank: 1, tiedPlayers: 5, betterThanPercentile: 0,
       distribution: { binWidth: 0.5, minScore: rank.score, maxScore: rank.score, bins: [{ start: 4, count: 5 }] },
     });
     render(<Harness game={completedGame()} />);
     expect(await screen.findByText('0%')).toBeTruthy();
-    expect(screen.getByText('Tied #1 of 5 players · so far')).toBeTruthy();
     expect(screen.getByText('Normal estimate')).toBeTruthy();
   });
 
@@ -242,7 +240,6 @@ describe('daily percentile', () => {
     vi.setSystemTime(new Date('2026-10-19T00:00:01Z'));
     fireEvent(window, new Event('online'));
     expect(await screen.findByText('Today’s scores')).toBeTruthy();
-    expect(screen.getByText('#2 of 5 players · so far')).toBeTruthy();
     expect(screen.getByText(/today’s other players/)).toBeTruthy();
     expect(submitDailyScore).toHaveBeenCalledTimes(2);
     expect(getDailyRank).not.toHaveBeenCalled();
@@ -282,7 +279,6 @@ describe('daily percentile', () => {
     fireEvent(window, new Event('online'));
     expect(await screen.findByText('Daily scores')).toBeTruthy();
     expect(screen.getByText('✓ Saved')).toBeTruthy();
-    expect(screen.getByText('#2 of 5 players · 2026-10-18')).toBeTruthy();
     expect(submitDailyScore).toHaveBeenCalledTimes(1);
     expect(getDailyRank).toHaveBeenCalledTimes(1);
   });
