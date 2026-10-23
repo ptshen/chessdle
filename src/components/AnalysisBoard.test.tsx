@@ -133,6 +133,165 @@ describe('post-answer position analysis', () => {
     expect(screen.queryByText('Draw · Repetition')).toBeNull()
     expect(screen.getByRole('grid')).toBeTruthy()
     expect(screen.getByText('Black to move')).toBeTruthy()
+    fireEvent.keyDown(document.body, { key: 'ArrowRight' })
+    expect(screen.getByText('Draw · Repetition')).toBeTruthy()
+    expect(screen.getByText('0.00')).toBeTruthy()
+    expect(evaluatePosition).toHaveBeenCalledTimes(7)
+  })
+
+  it('uses Left and Right to step through multiple moves without losing the continuation', async () => {
+    render(<AnalysisBoard initialFen={initialFen} initialEvaluation={initialEvaluation} />)
+    expect((screen.getByRole('button', { name: 'Redo analysis move' }) as HTMLButtonElement).disabled).toBe(true)
+    fireEvent.keyDown(document.body, { key: 'ArrowLeft' })
+    expect(evaluatePosition).not.toHaveBeenCalled()
+    for (const uci of ['e2e4', 'e7e5', 'g1f3']) {
+      move(uci)
+      await act(async () => undefined)
+    }
+    expect(evaluatePosition).toHaveBeenCalledTimes(3)
+
+    fireEvent.keyDown(document.body, { key: 'ArrowLeft' })
+    expect(screen.getByRole('gridcell', { name: /^g1, white knight/i })).toBeTruthy()
+    expect(screen.getByText('White to move')).toBeTruthy()
+    fireEvent.keyDown(document.body, { key: 'ArrowLeft' })
+    expect(screen.getByRole('gridcell', { name: /^e7, black pawn/i })).toBeTruthy()
+    expect(screen.getByText('Black to move')).toBeTruthy()
+    fireEvent.keyDown(document.body, { key: 'ArrowRight' })
+    expect(screen.getByRole('gridcell', { name: /^e5, black pawn/i })).toBeTruthy()
+    fireEvent.keyDown(document.body, { key: 'ArrowRight' })
+    expect(screen.getByRole('gridcell', { name: /^f3, white knight/i })).toBeTruthy()
+    expect(screen.getByText('Black to move')).toBeTruthy()
+    fireEvent.keyDown(document.body, { key: 'ArrowRight' })
+    expect(screen.getByText('Black to move')).toBeTruthy()
+    expect((screen.getByRole('button', { name: 'Redo analysis move' }) as HTMLButtonElement).disabled).toBe(true)
+    expect(evaluatePosition).toHaveBeenCalledTimes(3)
+  })
+
+  it('truncates undone moves when playing a new continuation and Reset clears even fully undone history', async () => {
+    render(<AnalysisBoard initialFen={initialFen} initialEvaluation={initialEvaluation} />)
+    for (const uci of ['e2e4', 'e7e5', 'g1f3']) {
+      move(uci)
+      await act(async () => undefined)
+    }
+    fireEvent.keyDown(document.body, { key: 'ArrowLeft' })
+    fireEvent.keyDown(document.body, { key: 'ArrowLeft' })
+    move('c7c5')
+    await act(async () => undefined)
+    expect((screen.getByRole('button', { name: 'Redo analysis move' }) as HTMLButtonElement).disabled).toBe(true)
+    fireEvent.keyDown(document.body, { key: 'ArrowRight' })
+    expect(screen.getByRole('gridcell', { name: /^g1, white knight/i })).toBeTruthy()
+    expect(screen.getByRole('gridcell', { name: /^e7, black pawn/i })).toBeTruthy()
+    fireEvent.click(screen.getByRole('button', { name: 'Undo analysis move' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Redo analysis move' }))
+    expect(screen.getByRole('gridcell', { name: /^c5, black pawn/i })).toBeTruthy()
+
+    fireEvent.keyDown(document.body, { key: 'ArrowLeft' })
+    fireEvent.keyDown(document.body, { key: 'ArrowLeft' })
+    expect((screen.getByRole('button', { name: 'Reset analysis position' }) as HTMLButtonElement).disabled).toBe(false)
+    fireEvent.click(screen.getByRole('button', { name: 'Reset analysis position' }))
+    fireEvent.keyDown(document.body, { key: 'ArrowRight' })
+    expect(screen.getByRole('gridcell', { name: /^e2, white pawn/i })).toBeTruthy()
+    expect((screen.getByRole('button', { name: 'Undo analysis move' }) as HTMLButtonElement).disabled).toBe(true)
+    expect((screen.getByRole('button', { name: 'Redo analysis move' }) as HTMLButtonElement).disabled).toBe(true)
+  })
+
+  it('can undo and redo the submitted move without modifying the saved answer', async () => {
+    const saved = { ...initialEvaluation }
+    render(<AnalysisBoard initialFen={initialFen} initialEvaluation={saved} playedMove="d2d4" />)
+    await act(async () => undefined)
+    fireEvent.keyDown(document.body, { key: 'ArrowLeft' })
+    expect(screen.getByRole('gridcell', { name: /^d2, white pawn/i })).toBeTruthy()
+    expect(screen.getByText('+2.30')).toBeTruthy()
+    fireEvent.keyDown(document.body, { key: 'ArrowRight' })
+    expect(screen.getByRole('gridcell', { name: /^d4, white pawn/i })).toBeTruthy()
+    expect(screen.getByText('Black to move')).toBeTruthy()
+    expect(evaluatePosition).toHaveBeenCalledTimes(1)
+    expect(saved).toEqual(initialEvaluation)
+  })
+
+  it('handles a focused board exactly once and also works from the analysis toolbar', async () => {
+    render(<AnalysisBoard initialFen={initialFen} initialEvaluation={initialEvaluation} />)
+    for (const uci of ['e2e4', 'e7e5']) {
+      move(uci)
+      await act(async () => undefined)
+    }
+    const square = screen.getByRole('gridcell', { name: /^g1, white knight/i })
+    square.focus()
+    fireEvent.keyDown(square, { key: 'ArrowLeft' })
+    expect(screen.getByText('Black to move')).toBeTruthy()
+    expect(screen.getByRole('gridcell', { name: /^e4, white pawn/i })).toBeTruthy()
+    expect(screen.getByRole('gridcell', { name: /^e7, black pawn/i })).toBeTruthy()
+    fireEvent.keyDown(square, { key: 'ArrowRight' })
+    expect(screen.getByText('White to move')).toBeTruthy()
+    expect(screen.getByRole('gridcell', { name: /^e5, black pawn/i })).toBeTruthy()
+    const undo = screen.getByRole('button', { name: 'Undo analysis move' })
+    undo.focus()
+    fireEvent.keyDown(undo, { key: 'ArrowLeft' })
+    expect(screen.getByText('Black to move')).toBeTruthy()
+  })
+
+  it('leaves typing, modified arrows, composition, and already-handled events alone', async () => {
+    render(<><AnalysisBoard initialFen={initialFen} initialEvaluation={initialEvaluation} />
+      <input aria-label="Input" /><textarea aria-label="Text area" /><select aria-label="Select"><option>One</option></select>
+      <div contentEditable suppressContentEditableWarning><span>Editable text</span></div>
+    </>)
+    move('e2e4')
+    await act(async () => undefined)
+    for (const target of [screen.getByLabelText('Input'), screen.getByLabelText('Text area'), screen.getByLabelText('Select'), screen.getByText('Editable text')]) {
+      expect(fireEvent.keyDown(target, { key: 'ArrowLeft' })).toBe(true)
+    }
+    for (const modifier of ['ctrlKey', 'altKey', 'metaKey', 'shiftKey', 'isComposing']) {
+      expect(fireEvent.keyDown(document.body, { key: 'ArrowLeft', [modifier]: true })).toBe(true)
+    }
+    const handled = new KeyboardEvent('keydown', { key: 'ArrowLeft', bubbles: true, cancelable: true })
+    handled.preventDefault()
+    fireEvent(document.body, handled)
+    expect(screen.getByText('Black to move')).toBeTruthy()
+    expect(screen.getByRole('gridcell', { name: /^e4, white pawn/i })).toBeTruthy()
+  })
+
+  it('does not navigate while a promotion dialog is open', async () => {
+    const fen = '7k/P7/8/8/8/8/8/7K b - - 0 1'
+    render(<AnalysisBoard initialFen={fen} initialEvaluation={evaluation(500, 'h8g8')} playedMove="h8g8" />)
+    await act(async () => undefined)
+    fireEvent.click(screen.getByRole('gridcell', { name: /^a7, white pawn/i }))
+    fireEvent.click(screen.getByRole('gridcell', { name: /^a8,/i }))
+    const promotion = screen.getByRole('dialog', { name: 'Choose a promotion piece' })
+    fireEvent.keyDown(promotion, { key: 'ArrowLeft' })
+    fireEvent.keyDown(document.body, { key: 'ArrowLeft' })
+    expect(screen.getByRole('dialog', { name: 'Choose a promotion piece' })).toBeTruthy()
+    expect(screen.getByText('White to move')).toBeTruthy()
+    expect(screen.getByRole('gridcell', { name: /^g8, black king/i })).toBeTruthy()
+  })
+
+  it('aborts undone analysis, ignores late results, and reuses completed redo evaluations', async () => {
+    const oldSearch = deferred()
+    const newSearch = deferred()
+    vi.mocked(evaluatePosition).mockReturnValueOnce(oldSearch.promise).mockReturnValueOnce(newSearch.promise)
+    render(<AnalysisBoard initialFen={initialFen} initialEvaluation={initialEvaluation} />)
+    move('e2e4')
+    const oldOptions = vi.mocked(evaluatePosition).mock.calls[0][1]
+    fireEvent.keyDown(document.body, { key: 'ArrowLeft' })
+    expect(oldOptions?.signal?.aborted).toBe(true)
+    fireEvent.keyDown(document.body, { key: 'ArrowRight' })
+    expect(evaluatePosition).toHaveBeenCalledTimes(2)
+    act(() => oldOptions?.onUpdate?.(evaluation(900)))
+    await act(async () => oldSearch.resolve(evaluation(999)))
+    expect(screen.queryByText('+9.00')).toBeNull()
+    expect(screen.queryByText('+9.99')).toBeNull()
+    await act(async () => newSearch.resolve(evaluation(450)))
+    fireEvent.keyDown(document.body, { key: 'ArrowLeft' })
+    fireEvent.keyDown(document.body, { key: 'ArrowRight' })
+    expect(screen.getByText('+4.50')).toBeTruthy()
+    expect(evaluatePosition).toHaveBeenCalledTimes(2)
+  })
+
+  it('removes its keyboard shortcuts when analysis is closed', () => {
+    const view = render(<AnalysisBoard initialFen={initialFen} initialEvaluation={initialEvaluation} />)
+    expect(fireEvent.keyDown(document.body, { key: 'ArrowLeft' })).toBe(false)
+    view.unmount()
+    expect(fireEvent.keyDown(document.body, { key: 'ArrowLeft' })).toBe(true)
+    expect(fireEvent.keyDown(document.body, { key: 'ArrowRight' })).toBe(true)
   })
 
   it('aborts obsolete searches, ignores their late updates, and cancels when leaving analysis', async () => {

@@ -100,15 +100,20 @@ describe('chess board perspective', () => {
     expect(corners()).toEqual(['a8', 'h1'])
   })
 
-  it('keeps keyboard navigation aligned with the black perspective', () => {
+  it('keeps history shortcut directions unchanged from Black’s perspective', () => {
     const chess = new Chess()
     chess.move('e4')
-    render(<ChessBoard fen={chess.fen()} interactive />)
+    const onHistoryNavigate = vi.fn()
+    render(<ChessBoard fen={chess.fen()} interactive onHistoryNavigate={onHistoryNavigate} />)
     square('e7').focus()
     fireEvent.keyDown(square('e7'), { key: 'ArrowUp' })
-    expect(document.activeElement).toBe(square('e6'))
-    fireEvent.keyDown(square('e6'), { key: 'ArrowRight' })
-    expect(document.activeElement).toBe(square('d6'))
+    expect(document.activeElement).toBe(square('e7'))
+    expect(onHistoryNavigate).not.toHaveBeenCalled()
+    fireEvent.keyDown(square('e7'), { key: 'ArrowLeft' })
+    expect(onHistoryNavigate).toHaveBeenLastCalledWith('undo')
+    fireEvent.keyDown(square('e7'), { key: 'ArrowRight' })
+    expect(onHistoryNavigate).toHaveBeenLastCalledWith('redo')
+    expect(document.activeElement).toBe(square('e7'))
   })
 })
 
@@ -250,17 +255,46 @@ describe('legal chess board interactions', () => {
     expect(document.activeElement).toBe(square('a7'))
   })
 
-  it('navigates by keyboard without wrapping at board edges', () => {
+  it('keeps arrow keys from navigating squares and allows Tab focus for every square', () => {
     render(<ChessBoard fen={new Chess().fen()} interactive />)
     square('e2').focus()
-    fireEvent.keyDown(square('e2'), { key: 'ArrowDown' })
-    expect(document.activeElement).toBe(square('e1'))
-    fireEvent.keyDown(square('e1'), { key: 'ArrowDown' })
-    expect(document.activeElement).toBe(square('e1'))
-    fireEvent.keyDown(square('e1'), { key: 'Home' })
-    expect(document.activeElement).toBe(square('a1'))
-    fireEvent.keyDown(square('a1'), { key: 'ArrowLeft' })
-    expect(document.activeElement).toBe(square('a1'))
+    for (const key of ['ArrowDown', 'ArrowUp', 'ArrowLeft', 'ArrowRight']) {
+      expect(fireEvent.keyDown(square('e2'), { key })).toBe(true)
+      expect(document.activeElement).toBe(square('e2'))
+    }
+    expect(screen.getAllByRole('gridcell').every(cell => cell.tabIndex === 0)).toBe(true)
+    expect(screen.getByRole('grid').getAttribute('aria-label')).toContain('use Tab to navigate squares')
+  })
+
+  it('uses unmodified Left and Right for analysis history without moving square focus', () => {
+    const onHistoryNavigate = vi.fn()
+    render(<ChessBoard fen={new Chess().fen()} interactive onHistoryNavigate={onHistoryNavigate} />)
+    square('e2').focus()
+    expect(fireEvent.keyDown(square('e2'), { key: 'ArrowLeft' })).toBe(false)
+    expect(onHistoryNavigate).toHaveBeenLastCalledWith('undo')
+    expect(fireEvent.keyDown(square('e2'), { key: 'ArrowRight' })).toBe(false)
+    expect(onHistoryNavigate).toHaveBeenLastCalledWith('redo')
+    expect(onHistoryNavigate).toHaveBeenCalledTimes(2)
+    expect(document.activeElement).toBe(square('e2'))
+    for (const modifier of ['shiftKey', 'altKey', 'ctrlKey', 'metaKey', 'isComposing']) {
+      expect(fireEvent.keyDown(square('e2'), { key: 'ArrowLeft', [modifier]: true })).toBe(true)
+    }
+    expect(onHistoryNavigate).toHaveBeenCalledTimes(2)
+    expect(document.activeElement).toBe(square('e2'))
+    expect(screen.getByRole('grid').getAttribute('aria-label')).toContain('undo and redo analysis moves')
+  })
+
+  it('keeps analysis shortcuts from dismissing promotion or navigating its squares', () => {
+    const onHistoryNavigate = vi.fn()
+    render(<ChessBoard fen="4k3/P7/8/8/8/8/8/4K3 w - - 0 1" interactive onHistoryNavigate={onHistoryNavigate} />)
+    fireEvent.click(square('a7'))
+    fireEvent.click(square('a8'))
+    const promote = screen.getByRole('button', { name: 'Promote to queen' })
+    fireEvent.keyDown(promote, { key: 'ArrowLeft' })
+    fireEvent.keyDown(square('a7'), { key: 'ArrowRight' })
+    expect(onHistoryNavigate).not.toHaveBeenCalled()
+    expect(screen.getByRole('dialog', { name: 'Choose a promotion piece' })).toBeTruthy()
+    expect(screen.getAllByRole('gridcell').every(cell => cell.tabIndex === -1)).toBe(true)
   })
 
   it('flips the board and exposes a readable static position', () => {

@@ -12,6 +12,7 @@ export type ChessBoardProps = {
   interactive?: boolean
   selectedMove?: string | null
   onMove?: (uci: string) => void
+  onHistoryNavigate?: (direction: 'undo' | 'redo') => void
   lastMove?: string | null
   bestMove?: string | null
 }
@@ -47,6 +48,7 @@ export function ChessBoard({
   interactive = false,
   selectedMove,
   onMove,
+  onHistoryNavigate,
   lastMove,
   bestMove,
 }: ChessBoardProps) {
@@ -64,13 +66,11 @@ export function ChessBoard({
   const suppressClickRef = useRef(false)
   const [dragPreview, setDragPreview] = useState<DragPreview | null>(null)
   const [selectedSquare, setSelectedSquare] = useState<Square | null>(null)
-  const [focusSquare, setFocusSquare] = useState<Square>('e2')
   const [promotion, setPromotion] = useState<{ from: Square; to: Square; color: Color } | null>(null)
   const [announcement, setAnnouncement] = useState('')
   const blackAtBottom = flipped ?? chess.turn() === 'b'
   const files = blackAtBottom ? 'hgfedcba' : 'abcdefgh'
   const ranks = blackAtBottom ? [1, 2, 3, 4, 5, 6, 7, 8] : [8, 7, 6, 5, 4, 3, 2, 1]
-  const squares = ranks.flatMap((rank) => [...files].map((file) => `${file}${rank}` as Square))
   const legalMoves = selectedSquare ? chess.moves({ square: selectedSquare, verbose: true }) : []
   const destinations = new Set(legalMoves.map((move) => move.to))
   const highlight = selectedMove || lastMove
@@ -102,7 +102,6 @@ export function ChessBoard({
   function chooseMove(from: Square, to: Square, promotionPiece?: PieceSymbol) {
     setSelectedSquare(null)
     setPromotion(null)
-    setFocusSquare(to)
     setAnnouncement(`Move selected: ${from} to ${to}${promotionPiece ? `, promote to ${PIECE_NAMES[promotionPiece]}` : ''}.`)
     onMove?.(`${from}${to}${promotionPiece || ''}`)
     boardRef.current?.querySelector<HTMLButtonElement>(`[data-square="${to}"]`)?.focus()
@@ -223,27 +222,21 @@ export function ChessBoard({
     setAnnouncement('Move cancelled.')
   }
 
-  function handleKeyDown(event: KeyboardEvent<HTMLButtonElement>, square: Square) {
+  function handleKeyDown(event: KeyboardEvent<HTMLButtonElement>) {
     if (!interactive) return
-    const index = squares.indexOf(square)
-    let nextIndex = index
-    if (event.key === 'ArrowRight') nextIndex = Math.min(index + 1, Math.floor(index / 8) * 8 + 7)
-    else if (event.key === 'ArrowLeft') nextIndex = Math.max(index - 1, Math.floor(index / 8) * 8)
-    else if (event.key === 'ArrowDown') nextIndex = index < 56 ? index + 8 : index
-    else if (event.key === 'ArrowUp') nextIndex = index >= 8 ? index - 8 : index
-    else if (event.key === 'Home') nextIndex = Math.floor(index / 8) * 8
-    else if (event.key === 'End') nextIndex = Math.floor(index / 8) * 8 + 7
-    else if (event.key === 'Escape') {
+    if (onHistoryNavigate && !promotion && !event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey
+      && !event.nativeEvent.isComposing && (event.key === 'ArrowLeft' || event.key === 'ArrowRight')) {
+      event.preventDefault()
+      suppressClickRef.current = dragRef.current?.active ?? false
+      clearDrag()
+      setSelectedSquare(null)
+      onHistoryNavigate(event.key === 'ArrowLeft' ? 'undo' : 'redo')
+    } else if (event.key === 'Escape') {
       suppressClickRef.current = dragRef.current?.active ?? false
       clearDrag()
       setSelectedSquare(null)
       setAnnouncement('Selection cleared.')
-      return
-    } else return
-    event.preventDefault()
-    const nextSquare = squares[nextIndex]
-    setFocusSquare(nextSquare)
-    boardRef.current?.querySelector<HTMLButtonElement>(`[data-square="${nextSquare}"]`)?.focus()
+    }
   }
 
   return (
@@ -252,7 +245,7 @@ export function ChessBoard({
         className="chess-board"
         ref={gridRef}
         role={interactive ? 'grid' : 'img'}
-        aria-label={interactive ? `Chess board. ${turnName} to move.${checkDescription}${suggestionDescription} Drag a piece, or use arrow keys to navigate and Enter to select a piece and its destination.` : `Chess position. ${turnName} to move.${checkDescription}${suggestionDescription} ${positionDescription}.`}
+        aria-label={interactive ? `Chess board. ${turnName} to move.${checkDescription}${suggestionDescription}${onHistoryNavigate ? ' Left and Right arrow keys undo and redo analysis moves.' : ''} Drag a piece, or use Tab to navigate squares and Enter to select a piece and its destination.` : `Chess position. ${turnName} to move.${checkDescription}${suggestionDescription} ${positionDescription}.`}
         aria-rowcount={interactive ? 8 : undefined}
         aria-colcount={interactive ? 8 : undefined}
         onPointerMove={handlePointerMove}
@@ -301,12 +294,11 @@ export function ChessBoard({
                   aria-colindex={interactive ? column + 1 : undefined}
                   aria-selected={interactive ? isSelected : undefined}
                   aria-label={`${square}, ${pieceLabel}${isInCheck ? ', in check' : ''}${isChecker ? ', checking piece' : ''}${isDestination ? ', legal destination' : ''}`}
-                  tabIndex={interactive && !promotion && focusSquare === square ? 0 : -1}
+                  tabIndex={interactive && !promotion ? 0 : -1}
                   disabled={!interactive}
                   onClick={() => selectSquare(square)}
                   onPointerDown={(event) => handlePointerDown(event, square)}
-                  onFocus={() => setFocusSquare(square)}
-                  onKeyDown={(event) => handleKeyDown(event, square)}
+                  onKeyDown={handleKeyDown}
                 >
                   {column === 0 && <span className="chess-coordinate chess-rank" aria-hidden="true">{rank}</span>}
                   {row === 7 && <span className="chess-coordinate chess-file" aria-hidden="true">{file}</span>}

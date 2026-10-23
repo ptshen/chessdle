@@ -117,7 +117,7 @@ retained when suitable; otherwise only that position is replaced. Older
 aggregate-only history remains in local storage but is excluded from current-rule
 statistics because its original answers are unavailable.
 
-The board supports click/tap, touch and mouse dragging, keyboard navigation, legal-move hints, castling,
+The board supports click/tap, touch and mouse dragging, Tab/Enter square selection, legal-move hints, castling,
 en passant, and choice of promotion piece. The board automatically puts the
 initial side to move at the bottom and keeps that orientation after a submitted
 move, including previews and reviews. A checked king and its attackers receive
@@ -125,8 +125,13 @@ light red highlights. Engine answers remain hidden until submission. Choosing
 View position opens an interactive analysis board; finished games offer the same
 analysis when reviewing any round. A best-move arrow and a signed evaluation
 bar to the board's right update as players explore legal moves. Positive scores
-favor White regardless of orientation. Undo steps back through the variation;
-Reset restores the original puzzle. Move rounds start from the submitted move,
+favor White regardless of orientation. Left Arrow undoes an analysis move and
+Right Arrow redoes it, including while a board square is focused. Arrow keys do
+not navigate squares; Tab/Shift+Tab and Enter support keyboard move entry.
+Undo and Redo buttons provide the same history controls on mobile. Playing a
+different move after undo starts a new variation and discards the old continuation.
+Reset restores the original puzzle and clears the explored variation. Shortcuts
+leave typing fields, modified keys, and open dialogs alone. Move rounds start from the submitted move,
 and Undo or Reset allows comparison with the original position. Exploration
 never alters the saved answer or score. Each result also links to its source.
 

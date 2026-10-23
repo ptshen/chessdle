@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Chess } from 'chess.js'
-import { Play, RotateCcw, Undo2 } from 'lucide-react'
+import { Play, Redo2, RotateCcw, Undo2 } from 'lucide-react'
 import { evaluatePosition, type EngineEvaluation } from '../lib/engine'
 import { ChessBoard } from './ChessBoard'
 import './AnalysisBoard.css'
@@ -17,6 +17,8 @@ type Analysis = {
   loading: boolean
   error: boolean
 }
+
+type MoveHistory = { moves: string[]; cursor: number }
 
 function makePosition(initialFen: string, moves: string[]) {
   const position = new Chess(initialFen)
@@ -66,7 +68,11 @@ export function AnalysisBoard(props: AnalysisBoardProps) {
 export default AnalysisBoard
 
 function PositionAnalysis({ initialFen, initialEvaluation, playedMove }: AnalysisBoardProps) {
-  const [moves, setMoves] = useState(() => startingMoves(initialFen, playedMove))
+  const [history, setHistory] = useState<MoveHistory>(() => {
+    const moves = startingMoves(initialFen, playedMove)
+    return { moves, cursor: moves.length }
+  })
+  const moves = useMemo(() => history.moves.slice(0, history.cursor), [history])
   const [retry, setRetry] = useState(0)
   const original = useMemo(() => new Chess(initialFen), [initialFen])
   const chess = useMemo(() => makePosition(initialFen, moves), [initialFen, moves])
@@ -78,6 +84,27 @@ function PositionAnalysis({ initialFen, initialEvaluation, playedMove }: Analysi
     fen, evaluation: terminal ?? cache.current.get(fen) ?? null,
     loading: !terminal && !cache.current.has(fen), error: false,
   }))
+
+  const navigateHistory = useCallback((direction: 'undo' | 'redo') => {
+    setHistory(current => {
+      const cursor = Math.max(0, Math.min(current.moves.length, current.cursor + (direction === 'undo' ? -1 : 1)))
+      return cursor === current.cursor ? current : { ...current, cursor }
+    })
+  }, [])
+
+  useEffect(() => {
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.defaultPrevented || event.isComposing || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return
+      const target = event.target instanceof Element ? event.target : document.activeElement
+      if (target?.closest('input, textarea, select, [role="textbox"], [contenteditable]:not([contenteditable="false"])')) return
+      if (document.querySelector('dialog[open], [role="dialog"][aria-modal="true"]:not([hidden]), [role="alertdialog"][aria-modal="true"]:not([hidden])')) return
+      event.preventDefault()
+      navigateHistory(event.key === 'ArrowLeft' ? 'undo' : 'redo')
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [navigateHistory])
 
   useEffect(() => {
     const cached = terminal ?? cache.current.get(fen)
@@ -126,14 +153,18 @@ function PositionAnalysis({ initialFen, initialEvaluation, playedMove }: Analysi
   const score = scoreText(evaluation)
 
   function playMove(uci: string) {
-    if (terminal) return
-    // Validate without mutating the history used for the current render.
-    try {
-      makePosition(initialFen, moves).move(uci)
-      setMoves([...moves, uci])
-    } catch {
-      // An obsolete button or cancelled gesture must not alter the position.
-    }
+    setHistory(current => {
+      const currentMoves = current.moves.slice(0, current.cursor)
+      const position = makePosition(initialFen, currentMoves)
+      if (position.isGameOver()) return current
+      try {
+        position.move(uci)
+        return { moves: [...currentMoves, uci], cursor: current.cursor + 1 }
+      } catch {
+        // An obsolete button or cancelled gesture must not alter the position.
+        return current
+      }
+    })
   }
 
   return <section className="position-analysis" aria-label="Position analysis" tabIndex={-1}>
@@ -147,7 +178,7 @@ function PositionAnalysis({ initialFen, initialEvaluation, playedMove }: Analysi
     </div>
     <div className="analysis-board-layout">
       <ChessBoard fen={fen} flipped={flipped} interactive={!terminal} onMove={playMove}
-        lastMove={moves.at(-1)} bestMove={best ? evaluation!.bestMove : undefined} />
+        lastMove={moves.at(-1)} bestMove={best ? evaluation!.bestMove : undefined} onHistoryNavigate={navigateHistory} />
       <div className={`analysis-eval-rail${loading ? ' is-thinking' : ''}`} role="img"
         aria-label={evaluation ? `Evaluation ${score}, White's perspective` : error ? 'Evaluation unavailable' : 'Evaluating position'}
         title="White's perspective: + favors White, − favors Black.">
@@ -171,10 +202,15 @@ function PositionAnalysis({ initialFen, initialEvaluation, playedMove }: Analysi
           onClick={() => best && playMove(`${best.from}${best.to}${best.promotion ?? ''}`)}><Play size={15} aria-hidden="true" />Play best</button>}
     </div>
     <div className="analysis-history-controls">
-      <button className="analysis-action" type="button" disabled={!moves.length} aria-label="Undo analysis move" onClick={() => setMoves(value => value.slice(0, -1))}>
+      <button className="analysis-action" type="button" disabled={!history.cursor} aria-label="Undo analysis move"
+        aria-keyshortcuts="ArrowLeft" title="Undo (←)" onClick={() => navigateHistory('undo')}>
         <Undo2 size={16} aria-hidden="true" />Undo
       </button>
-      <button className="analysis-action" type="button" disabled={!moves.length} aria-label="Reset analysis position" onClick={() => setMoves([])}>
+      <button className="analysis-action" type="button" disabled={history.cursor === history.moves.length} aria-label="Redo analysis move"
+        aria-keyshortcuts="ArrowRight" title="Redo (→)" onClick={() => navigateHistory('redo')}>
+        <Redo2 size={16} aria-hidden="true" />Redo
+      </button>
+      <button className="analysis-action" type="button" disabled={!history.moves.length} aria-label="Reset analysis position" onClick={() => setHistory({ moves: [], cursor: 0 })}>
         <RotateCcw size={15} aria-hidden="true" />Reset
       </button>
     </div>
