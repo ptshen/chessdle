@@ -1,5 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { createGame, puzzles, type GameState } from './game';
+import expandedPuzzleData from '../data/puzzles-expanded.json';
 
 const URL = 'https://chessdle-test.supabase.co';
 const KEY = 'sb_publishable_public-test-key';
@@ -15,8 +16,8 @@ const rank = (overrides = {}) => ({ day: DAY, scoring_version: 3, score: 21, ran
 const distribution = (overrides = {}) => ({ bin_width: 0.5, min_score: 5.1, max_score: 30.49,
   bins: [{ start: 5, count: 1 }, { start: 21, count: 1 }, { start: 30, count: 2 }], ...overrides });
 
-function completedGame(): GameState {
-  const game = createGame('daily', DAY);
+function completedGame(date = DAY): GameState {
+  const game = createGame('daily', date);
   return { ...game, index: 6, results: game.puzzleIds.map((puzzleId, index) => ({ puzzleId,
     penalty: index, guess: '1', answer: '1', evaluation: puzzles.find(puzzle => puzzle.id === puzzleId)!.evaluation,
   })) };
@@ -75,6 +76,29 @@ describe('ranking configuration and eligibility', () => {
     expect(ranking.rankableDailyGame(game)).toBe(true);
     vi.setSystemTime(NOW + 86_400_000);
     expect(ranking.rankableDailyGame(game)).toBe(true);
+  });
+
+  it.each([
+    ['2026-10-18', ['00Lyc-ply81', '005xu', '002O7', '00Knu-before', '00LBF', '00FHO', '000Zo']],
+    ['2026-10-21', ['00DkJ-ply40', '00FHO', '00IpT-ply36', '001xO', '002rd', '00MHi', '00LRq']],
+    ['2026-10-22', ['002VP', '00FF5-ply32', '002O7', '00IFk-ply24', '00Kd8', '00LBF', '00NUc']],
+  ] as const)('keeps the original ranking cohort for %s after the library expands', (date, ids) => {
+    vi.setSystemTime(Date.parse('2026-10-24T12:00:00Z'));
+    const game = completedGame(date);
+    expect(game.puzzleIds).toEqual(ids);
+    expect(ranking.rankableDailyGame(game)).toBe(true);
+  });
+
+  it('accepts the expanded daily cohort and rejects reordered expanded positions', () => {
+    const game = completedGame('2026-10-23');
+    const expandedIds = new Set(expandedPuzzleData.map(puzzle => puzzle.id));
+    expect(game.puzzleIds.some(id => expandedIds.has(id))).toBe(true);
+    expect(ranking.rankableDailyGame(game)).toBe(true);
+    const reordered = [...game.puzzleIds];
+    [reordered[0], reordered[2]] = [reordered[2], reordered[0]];
+    expect(ranking.rankableDailyGame({ ...game, puzzleIds: reordered,
+      results: game.results.map((result, index) => ({ ...result, puzzleId: reordered[index] })),
+    })).toBe(false);
   });
 
   it('excludes practice, incomplete, older-scoring and migrated noncanonical daily games', async () => {

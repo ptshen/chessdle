@@ -1,0 +1,25 @@
+{
+  "repository": "khemssharma/Chess",
+  "commit": "fb5075bb360ae26606e77fc703001472d6657d1e",
+  "path": "prisma/lichess_db_puzzle.csv.zst",
+  "gitBlobSha": "c801dc2abb9ef733c290afd12b3df87cbb0e2889",
+  "sourceUrl": "https://github.com/khemssharma/Chess/blob/fb5075bb360ae26606e77fc703001472d6657d1e/prisma/lichess_db_puzzle.csv.zst",
+  "originalDatabase": "https://database.lichess.org/#puzzles",
+  "license": "CC0-1.0",
+  "archiveBytes": 550319,
+  "archiveSha256": "2700d4c348e4a525ee15d1a52f953ca3a6a78ebc12cf52e64f2858b2d58e7978",
+  "normalizedCsvSha256": "2f061529140d42d3759418c5af871d3e93238a9e009f17e032e5e5c2b81e76ee",
+  "normalization": "Recover the complete CSV prefix from the pinned partial zstd archive; discard only the final incomplete row; require every retained complete solution to be legal. Source columns are preserved. No histories are available in this source.",
+  "counts": {
+    "uniqueSourceIds": 9962,
+    "validSolutions": 9962,
+    "validatedHistories": 0,
+    "incompleteTrailingRows": 1,
+    "rated1200Plus": 6220,
+    "mediumNonMateSources": 2494,
+    "hardNonMateSources": 2684,
+    "mateIn2": 516,
+    "mateIn3": 209,
+    "mateIn4": 37
+  }
+}

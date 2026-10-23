@@ -263,16 +263,36 @@ preferences disable the animations.
 
 ## Data and engine
 
-The bundled starter library contains **64 positions** from authentic Lichess
-puzzle records and their source games: 28 medium numerical positions, 28 hard
-numerical positions, and eight mate positions. Half of the numerical positions
-favor the side waiting to move. Answers use Stockfish depth 18; mate distances
-also agree at depth 24, with legally verified checkmating lines.
+The library contains **2,003 positions**, including **1,939 verified additions**
+from Lichess puzzle extracts, source games, and validated solution continuations. The combined eligible
+pools are:
+
+| Rounds | Position pool | Original | Expanded total |
+| --- | --- | ---: | ---: |
+| 1 and 3 | Medium winning-side / numerical evaluation | 28 | 500 |
+| 2 and 4 | Hard winning-side / numerical evaluation | 28 | 1,000 |
+| 5 and 6 | Hard best move (a subset of the hard pool) | 12 | 500 |
+| 7 | Mate in 2–4 | 5 | 500 |
+
+Three original mate-in-one positions remain stored for compatibility but are
+ineligible for play. Numerical positions are balanced equally by winning color
+and whether the winning side is moving or waiting. Half of each difficulty pool
+favors the side waiting to move. Answers use Stockfish depth 18; mate distances also agree at depth 24,
+with legally verified checkmating lines.
+
+The original pack remains unchanged. The expansion applies to daily dates from
+**October 23, 2026**, preserving earlier daily layouts and ranking groups. New
+practice games use it immediately. Existing saves keep their recorded positions.
+Selection remains equally weighted within each eligible round pool, with no
+source puzzle repeated within one game. Repeats across days remain possible.
 
 Lichess's first setup move is applied before puzzle positions are shown.
-Earlier game positions are included for evaluation rounds. Difficulty uses the
+Earlier game positions and positions after the first solver move of a verified
+Lichess solution are included only for evaluation rounds. These continuations
+receive their own engine evaluation and do not add duplicate source puzzles.
+Difficulty uses the
 historical source puzzle rating as a proxy and needs future calibration from
-player performance. The small starter library is reused across days and
+player performance. This curated library is reused across days and
 practice; it is not the entire Lichess dataset. See [DATA.md](DATA.md) for source
 links, provenance, verification details, limitations, and the CSV importer.
 

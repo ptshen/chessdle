@@ -5,8 +5,16 @@ import {
   type GameState, type RoundResult,
 } from './game'
 import { SCORING_VERSION } from './scoring'
+import expandedPuzzleData from '../data/puzzles-expanded.json'
+import legacyPuzzleData from '../data/puzzles.json'
+import puzzlePacks from '../data/puzzle-packs.json'
 
 const TODAY = '2026-10-18'
+const publishedDailySets = [
+  ['2026-10-18', ['00Lyc-ply81', '005xu', '002O7', '00Knu-before', '00LBF', '00FHO', '000Zo']],
+  ['2026-10-21', ['00DkJ-ply40', '00FHO', '00IpT-ply36', '001xO', '002rd', '00MHi', '00LRq']],
+  ['2026-10-22', ['002VP', '00FF5-ply32', '002O7', '00IFk-ply24', '00Kd8', '00LBF', '00NUc']],
+] as const
 
 function answerFor(game: GameState, index: number): RoundResult {
   const puzzle = puzzles.find(candidate => candidate.id === game.puzzleIds[index])!
@@ -44,9 +52,73 @@ afterEach(() => {
 })
 
 describe('seven-round puzzle selection', () => {
+  it.each(publishedDailySets)('preserves the published daily set for %s after expanding the library', (date, ids) => {
+    expect(selectPuzzles(`chessdle-v1-${date}`)).toEqual(ids)
+    expect(createGame('daily', date).puzzleIds).toEqual(ids)
+  })
+
+  it('keeps every original position and includes each expanded ID once', () => {
+    expect(puzzles.slice(0, legacyPuzzleData.length)).toEqual(legacyPuzzleData)
+    expect(new Set(puzzles.map(puzzle => puzzle.id)).size).toBe(puzzles.length)
+    for (const puzzle of expandedPuzzleData) expect(puzzles.find(position => position.id === puzzle.id)).toEqual(puzzle)
+  })
+
+  it.each(ROUND_PLAN.map((round, index) => [index + 1, round.label, round.difficulty, round.type] as const))(
+    'provides at least 500 distinct eligible source puzzles for round %i (%s, %s) in the expanded daily/practice library',
+    (_roundNumber, _label, difficulty, type) => {
+      const eligible = puzzles.filter(position => {
+        const { cp, mate } = position.evaluation
+        const solutionPosition = position.phase === 'after' || position.phase === undefined
+        if (type === 'mate') return solutionPosition && mate !== null && Number.isInteger(mate) && Math.abs(mate) >= 2
+        if (cp === null || !Number.isFinite(cp) || mate !== null || Math.abs(cp) < 50 || Math.abs(cp) > 1000) return false
+        if ((position.rating < 1800) !== (difficulty === 'Medium')) return false
+        return type !== 'move' || solutionPosition
+      })
+      // Alternate phases or game fragments from one puzzle must not inflate the
+      // promised variety. All seven rows assert their actual usable source pool.
+      const sources = new Set(eligible.map(position => position.rawPuzzleId ?? position.id.replace('-before', '')))
+      expect(sources.size).toBeGreaterThanOrEqual(500)
+    },
+  )
+
+  it('makes new positions available in every round for future dailies and practice', () => {
+    expect(puzzlePacks.expandedFrom).toBe('2026-10-23')
+    const expandedIds = new Set(expandedPuzzleData.map(puzzle => puzzle.id))
+    expect(expandedIds.size).toBeGreaterThan(0)
+    for (const mode of ['daily', 'practice'] as const) {
+      const usedExpansion = ROUND_PLAN.map(() => false)
+      for (let sample = 0; sample < 366; sample++) {
+        const date = new Date(`${puzzlePacks.expandedFrom}T12:00:00Z`)
+        date.setUTCDate(date.getUTCDate() + sample)
+        const seed = mode === 'daily' ? `chessdle-v1-${date.toISOString().slice(0, 10)}` : `practice-expansion-${sample}`
+        selectPuzzles(seed).forEach((id, index) => { usedExpansion[index] ||= expandedIds.has(id) })
+      }
+      expect(usedExpansion).toEqual(ROUND_PLAN.map(() => true))
+    }
+  })
+
   it('uses two winner rounds, two evaluation rounds, two best-move rounds, and one mate round', () => {
     expect(ROUND_PLAN.map(round => round.type)).toEqual(['winner', 'winner', 'evaluation', 'evaluation', 'move', 'move', 'mate'])
     expect(ROUND_PLAN.slice(4, 6).map(round => round.difficulty)).toEqual(['Hard', 'Hard'])
+  })
+
+  it('uses continuation positions only for winner and evaluation rounds', () => {
+    const continuationIds = new Set(puzzles.filter(position => position.phase === 'continuation').map(position => position.id))
+    expect(continuationIds.size).toBeGreaterThan(0)
+    for (const mode of ['daily', 'practice'] as const) {
+      let selectedContinuations = 0
+      for (let sample = 0; sample < 64; sample++) {
+        const date = new Date(`${puzzlePacks.expandedFrom}T12:00:00Z`)
+        date.setUTCDate(date.getUTCDate() + sample)
+        const seed = mode === 'daily' ? `chessdle-v1-${date.toISOString().slice(0, 10)}` : `practice-continuation-${sample}`
+        selectPuzzles(seed).forEach((id, index) => {
+          if (!continuationIds.has(id)) return
+          selectedContinuations++
+          expect(['winner', 'evaluation']).toContain(ROUND_PLAN[index].type)
+        })
+      }
+      expect(selectedContinuations).toBeGreaterThan(0)
+    }
   })
 
   it('is deterministic and satisfies all round constraints across 1,000 seeds', () => {
@@ -62,7 +134,7 @@ describe('seven-round puzzle selection', () => {
       positions.forEach((position, index) => {
         const round = ROUND_PLAN[index]
         if (index === 6) {
-          expect(position.phase).not.toBe('before')
+          expect(['after', undefined]).toContain(position.phase)
           expect(position.evaluation.mate).not.toBeNull()
           expect(Math.abs(position.evaluation.mate!)).toBeGreaterThanOrEqual(2)
         } else {
@@ -72,7 +144,7 @@ describe('seven-round puzzle selection', () => {
           expect(Math.abs(position.evaluation.cp!)).toBeLessThanOrEqual(1000)
           if (round.difficulty === 'Medium') expect(position.rating).toBeLessThan(1800)
           else expect(position.rating).toBeGreaterThanOrEqual(1800)
-          if (round.type === 'move') expect(position.phase).not.toBe('before')
+          if (round.type === 'move') expect(['after', undefined]).toContain(position.phase)
         }
       })
     }
@@ -128,6 +200,33 @@ describe('local calendar days', () => {
 })
 
 describe('saved game recovery', () => {
+  it.each(publishedDailySets)('retains completed published daily progress for %s with the expanded library installed', (date, ids) => {
+    const [year, month, day] = date.split('-').map(Number)
+    vi.setSystemTime(new Date(year, month - 1, day, 12))
+    const game = { ...createGame('daily', date), puzzleIds: [...ids] }
+    const completed = { ...game, index: 6, results: ids.map((_, index) => answerFor(game, index)), finished: true }
+    saveStorage(storageKey('daily', date), completed)
+    expect(loadGame('daily')).toEqual(completed)
+    expect(saveGame(createGame('daily', date)).game).toEqual(completed)
+  })
+
+  it('keeps saved practice positions from the original library after expansion activates', () => {
+    vi.setSystemTime(new Date(2026, 9, 23, 12))
+    const game = { ...createGame('practice', TODAY), puzzleIds: [...publishedDailySets[0][1]] }
+    const saved = { ...game, index: 1, results: [answerFor(game, 0)] }
+    saveStorage(storageKey('practice'), saved)
+    expect(loadGame('practice')).toEqual(saved)
+  })
+
+  it('does not replace daily progress written by an older tab with a newly selected expanded layout', () => {
+    vi.setSystemTime(new Date(2026, 9, 23, 12))
+    const game = { ...createGame('daily'), puzzleIds: [...publishedDailySets[0][1]] }
+    const saved = { ...game, index: 1, results: [answerFor(game, 0)] }
+    saveStorage(storageKey('daily'), saved)
+    expect(loadGame('daily')).toEqual(saved)
+    expect(saveGame(createGame('daily')).game).toEqual(saved)
+  })
+
   it('resumes before submission, after submission, and after moving to the next round', () => {
     const unsubmitted = createGame('daily', TODAY)
     const submitted = answeredGame()
@@ -268,6 +367,8 @@ describe('saved game recovery', () => {
     expect(resumed.results.map(result => result.puzzleId)).toEqual(saved.results.slice(0, 4).map(result => result.puzzleId))
     expect(resumed.puzzleIds.filter((_, index) => index !== 4)).toEqual(saved.puzzleIds.filter((_, index) => index !== 4))
     const replacement = puzzles.find(p => p.id === resumed.puzzleIds[4])!
+    expect(replacement.id).toBe('00KYC')
+    expect(legacyPuzzleData.some(puzzle => puzzle.id === replacement.id)).toBe(true)
     expect(replacement.phase).toBe('after')
     expect(replacement.rating).toBeGreaterThanOrEqual(1800)
     expect(usedSources.has(replacement.rawPuzzleId)).toBe(false)

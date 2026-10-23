@@ -2,14 +2,21 @@ import { Chess } from 'chess.js';
 import type { EngineEvaluation } from './engine';
 import { SCORING_VERSION, matePenalty, numericPenalty, winnerPenalty } from './scoring';
 import puzzleData from '../data/puzzles.json';
+import expandedPuzzleData from '../data/puzzles-expanded.json';
+import puzzlePacks from '../data/puzzle-packs.json';
 
 export type Mode = 'daily' | 'practice';
 export type RoundType = 'winner' | 'evaluation' | 'move' | 'mate';
 export interface Puzzle {
-  id: string; rawPuzzleId?: string; phase?: 'before' | 'after'; fen: string; rating: number;
+  id: string; rawPuzzleId?: string; phase?: 'before' | 'after' | 'continuation'; fen: string; rating: number;
   themes: string[]; sourceUrl: string; gameUrl?: string; evaluation: EngineEvaluation;
 }
-export const puzzles = puzzleData as Puzzle[];
+const legacyPuzzles = puzzleData as Puzzle[];
+const puzzleById = new Map<string, Puzzle>();
+for (const puzzle of [...legacyPuzzles, ...expandedPuzzleData as Puzzle[]]) {
+  if (!puzzleById.has(puzzle.id)) puzzleById.set(puzzle.id, puzzle);
+}
+export const puzzles: readonly Puzzle[] = [...puzzleById.values()];
 export const ROUND_PLAN: { type: RoundType; difficulty: 'Medium' | 'Hard'; label: string; title: string }[] = [
   { type: 'winner', difficulty: 'Medium', label: 'Winning side', title: 'Who’s winning?' },
   { type: 'winner', difficulty: 'Hard', label: 'Winning side', title: 'Who’s winning?' },
@@ -31,9 +38,10 @@ export function millisecondsUntilLocalMidnight(now = new Date()): number {
 }
 const sourcePuzzleId = (puzzle: Puzzle) => puzzle.rawPuzzleId ?? puzzle.id.replace('-before', '');
 function eligibleForRound(puzzle: Puzzle, round: typeof ROUND_PLAN[number]): boolean {
-  if (round.type === 'mate') return puzzle.phase !== 'before' && puzzle.evaluation.mate !== null && Math.abs(puzzle.evaluation.mate) >= 2;
+  const solutionPosition = puzzle.phase === 'after' || puzzle.phase === undefined;
+  if (round.type === 'mate') return solutionPosition && puzzle.evaluation.mate !== null && Math.abs(puzzle.evaluation.mate) >= 2;
   if (puzzle.evaluation.cp === null || puzzle.evaluation.mate !== null || Math.abs(puzzle.evaluation.cp) < 50 || Math.abs(puzzle.evaluation.cp) > 1000) return false;
-  if (round.type === 'move' && puzzle.phase === 'before') return false;
+  if (round.type === 'move' && !solutionPosition) return false;
   return round.difficulty === 'Medium' ? puzzle.rating < 1800 : puzzle.rating >= 1800;
 }
 function randomFromSeed(seed: string) {
@@ -44,8 +52,11 @@ function randomFromSeed(seed: string) {
 export function selectPuzzles(seed: string): string[] {
   const random = randomFromSeed(seed);
   const used = new Set<string>();
+  const dailyDate = /^chessdle-v1-(\d{4}-\d{2}-\d{2})$/.exec(seed)?.[1];
+  // Keep published daily sets and their ranking cohorts stable when adding a pack.
+  const library = dailyDate && dailyDate < puzzlePacks.expandedFrom ? legacyPuzzles : puzzles;
   return ROUND_PLAN.map((round) => {
-    const eligible = puzzles.filter(p => !used.has(sourcePuzzleId(p)) && eligibleForRound(p, round));
+    const eligible = library.filter(p => !used.has(sourcePuzzleId(p)) && eligibleForRound(p, round));
     if (!eligible.length) throw new Error('The position library needs more verified positions for this round.');
     const selected = eligible[Math.floor(random() * eligible.length)];
     used.add(sourcePuzzleId(selected));
@@ -190,7 +201,9 @@ function migrateGame(game: GameState): GameState {
     const roundFive = puzzles.find(puzzle => puzzle.id === puzzleIds[4])!;
     const otherSources = new Set(puzzleIds.filter((_, index) => index !== 4).map(id => sourcePuzzleId(puzzles.find(puzzle => puzzle.id === id)!)));
     if (!eligibleForRound(roundFive, ROUND_PLAN[4]) || otherSources.has(sourcePuzzleId(roundFive))) {
-      const eligible = puzzles.filter(puzzle => eligibleForRound(puzzle, ROUND_PLAN[4]) && !otherSources.has(sourcePuzzleId(puzzle)));
+      // These older scoring versions predate the expanded pack. Their deterministic
+      // round-five repair must continue to use the original position library.
+      const eligible = legacyPuzzles.filter(puzzle => eligibleForRound(puzzle, ROUND_PLAN[4]) && !otherSources.has(sourcePuzzleId(puzzle)));
       const replacement = eligible[Math.floor(randomFromSeed(`${game.id}:round-five-move`)() * eligible.length)];
       puzzleIds = [...puzzleIds];
       puzzleIds[4] = replacement.id;
